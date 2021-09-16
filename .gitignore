@@ -1,0 +1,7 @@
+.dist
+node_modules/*
+src/static/images/*
+src/static/pages/*
+src/static/directories/*
+.DS_Store
+build/
