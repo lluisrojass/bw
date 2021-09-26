@@ -10,7 +10,14 @@ html, body {
 }
 
 body {
-  background-color: $bg-color;
   @include font-variant-regular;
+  background: $bg-gradient;
+  background-size: 600% 600%;
+  animation: breathe 15s ease infinite;
 }
 
+@keyframes breathe {
+  0% { background-position: 69% 0% }
+  50% { background-position: 32% 100% }
+  100% { background-position: 69% 0% }
+}

@@ -5,115 +5,180 @@ images:
     importTimestamp: 1630967596247
     description: null
     location:
-      - 40° 39' 38.76" N
-      - 73° 58' 43.92" W
+      lat: 40° 39' 38.76" N
+      lon: 73° 58' 43.92" W
+      readable: Prospect Park, Brooklyn, NY
   - id: c38784ffbbad
     takenTimestamp: 1622080869000
     importTimestamp: 1630968631850
     description: null
     location:
-      - 40° 42' 22.95" N
-      - 73° 59' 25.368" W
+      lat: 40° 42' 22.95" N
+      lon: 73° 59' 25.368" W
+      readable: Manhattan Bridge, New York, New York
   - id: 74c0d9d9adf9
     takenTimestamp: 1624324006000
     importTimestamp: 1630968749009
     description: null
     location:
-      - 40° 38' 24.24" N
-      - 73° 58' 1.65" W
+      lat: 40° 38' 24.24" N
+      lon: 73° 58' 1.65" W
+      readable: Cortelyou Road, Brooklyn, New York
   - id: cfa3c68203fb
     takenTimestamp: 1624482628000
     importTimestamp: 1630968874226
-    description: The celebration floats away
+    description: null
     location:
-      - 40° 39' 30.792" N
-      - 73° 58' 6.18" W
+      lat: 40° 39' 30.792" N
+      lon: 73° 58' 6.18" W
+      readable: Prospect Park, Brooklyn, New York
   - id: 3777ba216260
     takenTimestamp: 1624482651000
     importTimestamp: 1630968993974
-    description: painted over
+    description: null
     location:
-      - 40° 39' 30.378" N
-      - 73° 58' 5.88" W
+      lat: 40° 39' 30.378" N
+      lon: 73° 58' 5.88" W
+      readable: Prospect Park, Brooklyn, New York
   - id: 46ac75b298ee
     takenTimestamp: 1624638798000
     importTimestamp: 1630969210958
     description: null
     location:
-      - 40° 38' 25.512" N
-      - 73° 57' 54.87" W
+      lat: 40° 38' 25.512" N
+      lon: 73° 57' 54.87" W
+      readable: Ditmas Park, Brooklyn, New York
   - id: "983597645e20"
     takenTimestamp: 1624730606000
     importTimestamp: 1630969309012
     description: null
-    location: null
+    location:
+      readable: Coney Island, Brooklyn, New York
   - id: 0052e1fe1616
     takenTimestamp: 1624922355000
     importTimestamp: 1630969443855
-    description: are you used to this?
+    description: null
     location:
-      - 40° 44' 8.232" N
-      - 73° 59' 23.748" W
+      lat: 40° 44' 8.232" N
+      lon: 73° 59' 23.748" W
+      readable: Union Square Park, New York, New York
   - id: d8349e0fdb1d
     takenTimestamp: 1624922363000
     importTimestamp: 1630969615839
-    description: are you getting this?
+    description: null
     location:
-      - 40° 44' 8.268" N
-      - 73° 59' 23.688" W
+      lat: 40° 44' 8.268" N
+      lon: 73° 59' 23.688" W
+      readable: Union Square Park, New York, New York
   - id: ab2b0a57470a
     takenTimestamp: 1625247230000
     importTimestamp: 1630970267603
     description: null
     location:
-      - 40° 34' 27.12" N
-      - 73° 58' 24.912" W
+      lat: 40° 34' 27.12" N
+      lon: 73° 58' 24.912" W
+      readable: New York Aquarium, Brooklyn, New York
   - id: 9656212ea3f2
     takenTimestamp: 1625250606000
     importTimestamp: 1630970343561
     description: null
     location:
-      - 40° 34' 28.05" N
-      - 73° 58' 25.128" W
+      lat: 40° 34' 28.05" N
+      lon: 73° 58' 25.128" W
+      readable: New York Aquarium, Brooklyn, New York
   - id: 8332e3dc3ffa
     takenTimestamp: 1626808318000
     importTimestamp: 1630970409789
     description: null
     location:
-      - 44° 31' 43.992" N
-      - 73° 27' 40.032" W
+      lat: 44° 31' 43.992" N
+      lon: 73° 27' 40.032" W
+      readable: Ausable Chasm, New York
   - id: b17f5e5865cc
     takenTimestamp: 1628553251000
     importTimestamp: 1630970492380
     description: null
     location:
-      - 40° 39' 38.382" N
-      - 73° 57' 57.15" W
+      lat: 40° 39' 38.382" N
+      lon: 73° 57' 57.15" W
+      readable: Prospect Park, Brooklyn, New York
   - id: 09e30ac459b5
     takenTimestamp: 1629680846000
     importTimestamp: 1630970551284
     description: null
     location:
-      - 40° 38' 24.672" N
-      - 73° 57' 55.83" W
+      lat: 40° 38' 24.672" N
+      lon: 73° 57' 55.83" W
+      readable: Ditmas Park, Brooklyn, New York
   - id: f77b2837485c
     takenTimestamp: 1629690502000
     importTimestamp: 1630970606418
     description: null
     location:
-      - 40° 38' 24.672" N
-      - 73° 57' 56.13" W
+      lat: 40° 38' 24.672" N
+      lon: 73° 57' 56.13" W
+      readable: Ditmas Park, Brooklyn, New York
   - id: 566221041bc3
     takenTimestamp: 1630169605000
     importTimestamp: 1630970693351
     description: null
     location:
-      - 41° 56' 47.892" N
-      - 74° 0' 20.96" W
+      lat: 41° 56' 47.892" N
+      lon: 74° 0' 20.96" W
+      readable: Kingston, New York
   - id: 65048339d835
     takenTimestamp: 1630711260000
     importTimestamp: 1630970766251
     description: null
+    location:
+      lat: 40° 38' 38.718" N
+      lon: 73° 57' 59.1" W
+      readable: Ditmas Park, Brooklyn, New York
+  - id: e587cedd4091
+    takenTimestamp: 1631321852000
+    importTimestamp: 1632585315960
+    description: null
+    location:
+      lat: 40° 45' 24.882" N
+      lon: 73° 50' 48.678" W
+      readable: Citi Field, Queens, New York
+  - id: b179f791d9aa
+    takenTimestamp: 1631384957000
+    importTimestamp: 1632585463198
+    description: null
+    location:
+      lat: 40° 33' 53.028" N
+      lon: 73° 52' 38.508" W
+      readable: Fort Tilden, Queens, New York
+  - id: 0a64dc849bb9
+    takenTimestamp: 1631481289000
+    importTimestamp: 1632585628006
+    description: null
+    location:
+      lat: 40° 44' 7.842" N
+      lon: 73° 59' 25.278" W
+      readable: Union Square Park, New York, New York
+  - id: 719a563bdf5e
+    takenTimestamp: 1631487164000
+    importTimestamp: 1632585738786
+    description: me!
+    location:
+      lat: 40° 38' 25.71" N
+      lon: 73° 57' 55.47" W
+      readable: Ditmas Park, Brooklyn, New York
+  - id: 6d822a6c354f
+    takenTimestamp: 1631830624000
+    importTimestamp: 1632585807599
+    description: Brother Leo Obrien. Outstanding Student-Athlete Award. John Biscaino 1988.
+    location:
+      lat: 40° 38' 26.838" N
+      lon: 73° 57' 54.588" W
+      readable: Ditmas Park, Brooklyn, New York
+  - id: 7d13cd65ae7f
+    takenTimestamp: 1630171844000
+    importTimestamp: 1632607855774
+    description: null
     location: 
-      - 40° 38' 38.718" N
-      - 73° 57' 59.1" W
+      lat: 42° 11' 36.012" N
+      lon: 74° 3' 47.91" W
+      readable: Palenville, New York

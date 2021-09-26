@@ -1,5 +1,9 @@
 <template>
-  <Link :to="href" :class="$style.spacing">
+  <Link 
+    :to="href" 
+    :class="$style.spacing"
+    :isForText="false"
+  >
     <Picture
       v-bind="$props"
       :class="$style['gallery-picture']"
@@ -36,8 +40,6 @@
 <style module lang="scss">
   .gallery-picture {
     border-radius: 5px;
-    border: 1px solid $fg-grey;
-    box-shadow: 2px 2px 10px 1px black;
   }
   .spacing {
     margin: 0.5rem;

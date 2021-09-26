@@ -3,13 +3,10 @@ const { parse } = require('yaml');
 const { resolve } = require('path');
 const md5 = require('md5');
 const Batch = require('./batch');
+const Paths = require('./paths');
 
 const batch = new Batch();
 const pageSize = Number(process.env.PAGE_SIZE);
-
-const getSiteYamlFilePath = () => resolve(__dirname, '../site.yml');
-const getDirectoryPath = () => resolve(__dirname, '../src/static/directories/');
-const getPagesPath = () => resolve(__dirname, '../src/static/pages/');
 
 const createPageFileSlug = id => `${id}.json`;
 
@@ -37,7 +34,7 @@ const paginate = (images) => {
   return finalPages;
 }
 
-const createDefaultDirectory = (pages) => (
+const createPagesWithFileNames = (pages) => (
   pages.map((images, index) => ({
     fileName: createPageFileSlug(`${index}-${md5(JSON.stringify(images))}`),
     images,
@@ -46,7 +43,7 @@ const createDefaultDirectory = (pages) => (
 
 const emitPhotostreamDirectory = (dirObj) => {
   const fileSlug = 'default-photostream.json';
-  const filePath = resolve(getDirectoryPath(), fileSlug);
+  const filePath = resolve(Paths.getDirectoryPath(), fileSlug);
   const contents = JSON.stringify(dirObj, null, 4);
   batch.addTask();
 
@@ -62,7 +59,7 @@ const emitPhotostreamDirectory = (dirObj) => {
 };
 
 const emitPageFile = (fileName, pageContents) => {
-  const filePath = resolve(getPagesPath(), fileName);
+  const filePath = resolve(Paths.getPagesPath(), fileName);
   const contents = JSON.stringify(pageContents, null, 4);
 
   batch.addTask();
@@ -78,32 +75,19 @@ const emitPageFile = (fileName, pageContents) => {
   });
 }
 
-const createHybridDirectory = (directory) => {
-  const hybridDirectory = {};
-  directory.forEach(({ fileName, images }, index) => {
-    if (index === 0) {
-      hybridDirectory[index] = images;
-    } else {
-      hybridDirectory[index] = fileName;
-    }
-  });
-  return hybridDirectory;
-};
-
 (() => {
   batch.start();
-  const path = getSiteYamlFilePath();
+  const path = Paths.getSiteYamlFilePath();
   const file = readFileSync(path, { encoding: 'utf-8' });
 
   const siteYmlObject = parse(file);
   const { images } = siteYmlObject;
 
   const pages = paginate(images);
-  const directory = createDefaultDirectory(pages);
-  const hybridDirectory = createHybridDirectory(directory);
+  const pagesWithFileNames = createPagesWithFileNames(pages);
 
-  emitPhotostreamDirectory(hybridDirectory);  
-  directory.forEach(({ fileName, images }) => {
+  emitPhotostreamDirectory(pagesWithFileNames.map((page) => page.fileName));  
+  pagesWithFileNames.forEach(({ fileName, images }) => {
     emitPageFile(fileName, images);
   });
 })();

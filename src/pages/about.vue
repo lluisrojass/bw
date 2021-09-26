@@ -1,9 +1,13 @@
 <template>
   <Region>
     <Row>
-      <Column :small="4" :medium="12" :large="12">
-        <Paragraph>{{ about.text }}</Paragraph>
+      <Column :small="0" :medium="2" :large="2" />
+      <Column :small="8" :medium="8" :large="8">
+        <Paragraph :uppercase="false" :size="TEXT_SIZES.SMALL">
+          {{ about.text }}
+        </Paragraph>
       </Column>
+      <Column :small="0" :medium="2" :large="2" />
     </Row>
   </Region>
 </template>

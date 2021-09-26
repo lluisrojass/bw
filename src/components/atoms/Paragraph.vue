@@ -1,5 +1,10 @@
 <template>
-  <p :class="[$style.p, $style[sizeClass]]">
+  <p :class="[
+    'text',
+    $style.p, 
+    sizeClass,
+    $props.uppercase ? 'text--uppercase' : ''
+  ]">
     <slot />
   </p>
 </template>
@@ -7,12 +12,14 @@
   export const SIZES = {
     SMALL: 0x0,
     LARGE: 0x1,
+    MEDIUM: 0x3,
     NONE: 0x2
   };
 
   const CLASS_MAP = {
-    [SIZES.SMALL]: 'p--small',
-    [SIZES.LARGE]: 'p--large',
+    [SIZES.SMALL]: 'text--small',
+    [SIZES.LARGE]: 'text--large',
+    [SIZES.MEDIUM]: 'text--medium',
   };
 
   export default {
@@ -24,7 +31,12 @@
         ),
         required: false,
         default: SIZES.NONE
-      }
+      },
+      uppercase: {
+        type: Boolean,
+        required: false,
+        default: false,
+      },
     },
     data(props) {
       return {
@@ -35,17 +47,6 @@
 </script>
 <style lang="scss" module>
   .p {
-    @include font-variant-regular;
-    @include font-medium;
-    color: $fg-cream;
     margin: 0;
-
-    &--large {
-      @include font-large;
-    }
-
-    &--small {
-      @include font-small;
-    }
   }
 </style>

@@ -1,7 +1,21 @@
 <template>
   <NuxtLink
     :to="to"
-    :class="[$style.link, $style[sizeClass]]"
+    :tabIndex="$props.disabled ? -1 : 0"
+    :class="[
+      'text',
+      $style.link,
+      sizeClass,
+      $props.disabled 
+        ? $style['link--disabled']
+        : null,
+      $props.isForText
+        ? $style['link--text']
+        : null,
+      $props.uppercase 
+        ? 'text--uppercase'
+        : null
+    ]"
   >
     <slot />
   </NuxtLink>
@@ -17,7 +31,22 @@ export default {
         'none'
       ].indexOf(prop) !== -1,
       required: false,
-      default: 'none',
+      default: 'small',
+    },
+    disabled: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+    isForText: {
+      type: Boolean,
+      required: false,
+      default: true
+    },
+    uppercase: {
+      type: Boolean,
+      required: false,
+      default: false,
     },
     to: {
       type: String,
@@ -27,34 +56,39 @@ export default {
   data(props) {
     let sizeClass = ''; 
     if (props.size === 'large') {
-      sizeClass = 'link--large';
+      sizeClass = 'text--large';
     } else if (props.size === 'small') {
-      sizeClass = 'link--small';
+      sizeClass = 'text--small';
     }
     return {
-      sizeClass
+      sizeClass,
     };
   }
 }
 </script>
 <style lang="scss" module>
   .link {
-    color: $fg-cream;
     text-decoration: none;
-    outline-color: $fg-accent;
+    border-bottom: 2px solid transparent;
 
-    &--large {
-      @include font-large;
-      @include font-variant-bold;
+    &--disabled {
+      opacity: 0.5;
+      pointer-events: none;
     }
 
-    &--small {
-      @include font-small;
-      @include font-variant-regular;
+    &--text {
+      &:hover {
+        border-bottom: 2px solid $fg-cream;
+      }
     }
 
-    &:active {
-      outline-style: solid;
+    &:active,
+    &:focus {
+      outline-color: $fg-accent;
     }
+  }
+
+  .link--disabled.link--text {
+    border-bottom: 2px solid $fg-cream;
   }
 </style>

@@ -24,7 +24,9 @@ export default {
   css: [
     '~/assets/css/fonts.css',
     '~/assets/css/reset.scss',
+    '~/assets/css/styleguide.scss',
   ],
+  pageTransition: 'my-page',
   plugins: [],
   components: false,
   buildDir: 'build',

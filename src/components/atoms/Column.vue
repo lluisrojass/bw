@@ -1,7 +1,7 @@
 <template>
   <div :class="[
     $style.col, 
-    $style[`col--sm-${$props.small}-4`], 
+    $style[`col--sm-${$props.small}-8`], 
     $style[`col--md-${$props.medium}-12`], 
     $style[`col--lg-${$props.large}-12`], 
   ]">
@@ -13,7 +13,7 @@
     props: {
       small: {
         type: Number,
-        validator: (num) => num >= 1 && num <= 4,
+        validator: (num) => num >= 1 && num <= 8,
         required: true,
       },
       medium: {
@@ -32,11 +32,15 @@
 <style module lang="scss">
   .col {
     flex-shrink: 0;
-    @include create-col(1, 4, 'sm');
-    @include create-col(2, 4, 'sm');
-    @include create-col(3, 4, 'sm');
-    @include create-col(4, 4, 'sm');
-
+    @include create-col(1, 8, 'sm');
+    @include create-col(2, 8, 'sm');
+    @include create-col(3, 8, 'sm');
+    @include create-col(4, 8, 'sm');
+    @include create-col(5, 8, 'sm');
+    @include create-col(6, 8, 'sm');
+    @include create-col(7, 8, 'sm');
+    @include create-col(8, 8, 'sm');
+    
     @include min-medium {
       @include create-col(1, 12, 'md');
       @include create-col(2, 12, 'md');

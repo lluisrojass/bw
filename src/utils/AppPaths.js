@@ -1,4 +1,28 @@
 class AppPaths {
+  static isAboutPage(maybeAboutPath) {
+    return maybeAboutPath === AppPaths.createAboutSlug();
+  }
+
+  static isHomePage(maybeHomePath) {
+    return maybeHomePath === AppPaths.createHomeSlug();
+  }
+
+  static isMonthlyPage(maybeMonthlySlug) {
+    return maybeMonthlySlug === AppPaths.createMonthlySlug();
+  }
+
+  static createMonthlySlug() {
+    return '/monthly';
+  }
+
+  static createHomeSlug() {
+    return '/';
+  }
+  
+  static createAboutSlug() {
+    return '/about';
+  }
+
   static createAppPrefix() {
     return '/bw';
   };

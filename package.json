@@ -6,12 +6,14 @@
   "scripts": {
     "import-image": "node ./scripts/import-image.js",
     "create-build-dir": "mkdir -p ./build",
+    "create-meta-dir": "mkdir -p ./src/static/images/meta",
     "create-image-variants": "node ./scripts/create-image-variants",
+    "create-image-meta": "npm run create-meta-dir && node ./scripts/create-image-meta",
     "nuxt-dev": "nuxt",
     "nuxt-generate": "nuxt generate",
     "dev": "npm run create-build-dir && npm run nuxt-dev",
     "generate": "npm run create-build-dir && npm run generate",
-    "paginate-stream": "cross-env PAGE_SIZE=16 node ./scripts/create-pagination.js",
+    "paginate-stream": "cross-env PAGE_SIZE=10 node ./scripts/create-pagination.js",
     "clear-pages": "rimraf ./src/static/directories && rimraf ./src/static/pages",
     "setup-pages": "mkdir -p ./src/static/directories && mkdir -p ./src/static/pages",
     "paginate": "npm run clear-pages && npm run setup-pages && npm run paginate-stream",
@@ -29,6 +31,7 @@
   },
   "homepage": "https://github.com/lluisrojass/bw#readme",
   "dependencies": {
+    "axios": "^0.21.4",
     "nuxt": "^2.15.8",
     "typescript": "^4.3.5",
     "vue": "^2.6.14"
