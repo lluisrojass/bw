@@ -1,49 +1,22 @@
 <template>
-  <p :class="[
-    'text',
-    $style.p, 
-    sizeClass,
-    $props.uppercase ? 'text--uppercase' : ''
-  ]">
+  <p
+    :class="[
+      'text',
+      textClassSize,
+      $style.p,
+      textVariantClass
+    ]"
+  >
     <slot />
   </p>
 </template>
 <script>
-  export const SIZES = {
-    SMALL: 0x0,
-    LARGE: 0x1,
-    MEDIUM: 0x3,
-    NONE: 0x2
-  };
+import textSizeMixin from '~/mixins/TextSize'
+import textTransformMixin from '~/mixins/TextTransform'
 
-  const CLASS_MAP = {
-    [SIZES.SMALL]: 'text--small',
-    [SIZES.LARGE]: 'text--large',
-    [SIZES.MEDIUM]: 'text--medium',
-  };
-
-  export default {
-    props: {
-      size: {
-        type: Number,
-        validator: (prop) => (
-          Object.values(SIZES).indexOf(prop) !== -1
-        ),
-        required: false,
-        default: SIZES.NONE
-      },
-      uppercase: {
-        type: Boolean,
-        required: false,
-        default: false,
-      },
-    },
-    data(props) {
-      return {
-        sizeClass: CLASS_MAP[props.size]
-      };
-    }
-  }
+export default {
+  mixins: [textSizeMixin, textTransformMixin]
+}
 </script>
 <style lang="scss" module>
   .p {

@@ -5,17 +5,17 @@
   </div>
 </template>
 <script>
-  import Header from '~/components/organisms/Header';
-  import headerData from '~/static/cms/header.json';
+import Header from '~/components/molecules/Header'
+import headerData from '~/static/cms/header.json'
 
-  export default {
-    components: {
-      Header: Header
-    },
-    data() {
-      return {
-        header: JSON.parse(JSON.stringify(headerData))
-      }
+export default {
+  components: {
+    Header
+  },
+  data() {
+    return {
+      header: headerData
     }
-  };
+  }
+}
 </script>

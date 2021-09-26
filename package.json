@@ -13,11 +13,13 @@
     "nuxt-generate": "nuxt generate",
     "dev": "npm run create-build-dir && npm run nuxt-dev",
     "generate": "npm run create-build-dir && npm run generate",
-    "paginate-stream": "cross-env PAGE_SIZE=10 node ./scripts/create-pagination.js",
+    "paginate-stream": "cross-env PAGE_SIZE=16 node ./scripts/create-pagination.js",
     "clear-pages": "rimraf ./src/static/directories && rimraf ./src/static/pages",
     "setup-pages": "mkdir -p ./src/static/directories && mkdir -p ./src/static/pages",
     "paginate": "npm run clear-pages && npm run setup-pages && npm run paginate-stream",
-    "prepare-build": "npm run generate-image-variants && npm run paginate"
+    "prepare-build": "npm run generate-image-variants && npm run paginate",
+    "eslint:fix": "eslint --fix './{src,scripts}/**/*.{js,vue}'",
+    "eslint": "eslint --config './{src,scripts}/**/*.{js,vue}'"
   },
   "repository": {
     "type": "git",
@@ -37,9 +39,14 @@
     "vue": "^2.6.14"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.15.7",
+    "@nuxtjs/eslint-config": "^6.0.1",
     "@nuxtjs/svg": "^0.2.0",
     "cross-env": "^7.0.3",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^7.18.0",
     "git-repo-info": "^2.1.1",
+    "husky": "^7.0.2",
     "jimp": "^0.16.1",
     "md5": "^2.3.0",
     "rimraf": "^3.0.2",

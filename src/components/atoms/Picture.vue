@@ -1,51 +1,52 @@
 <template>
   <div :class="$style['picture-container']">
-    <picture :class="$style['picture']">
-      <source 
-        :srcset="largeImagePath" 
+    <picture :class="$style.picture">
+      <source
+        v-if="largeSrc"
+        :srcset="largeSrc"
         media="(min-width: 1200px)"
       >
-      <source 
-        :srcset="mediumImagePath" 
+      <source
+        v-if="mediumSrc"
+        :srcset="mediumSrc"
         media="(min-width: 800px)"
       >
-      <source 
-        :srcset="smallImagePath" 
+      <source
+        :srcset="smallSrc"
         media="(min-width: 0px)"
-      > 
-      <img 
-        :src="mediumImagePath" 
+      >
+      <img
+        :src="largeSrc || mediumSrc || smallSrc"
         :alt="description"
+        loading="lazy"
       >
     </picture>
   </div>
 </template>
 <script>
-  import ImageVariantPaths from '~/utils/ImageVariantPaths';
-
-  export default {
-    props: {
-      id: {
-        type: String,
-        required: true
-      },
-      description: {
-        type: String,
-        required: false,
-        default: 'A Black & White Square'
-      }
+export default {
+  props: {
+    description: {
+      type: String,
+      required: false,
+      default: 'A Black & White Square'
     },
-    data() {
-      const largeImagePath = ImageVariantPaths.createLargeImagePath(this.$props.id);
-      const mediumImagePath = ImageVariantPaths.createMediumImagePath(this.$props.id);
-      const smallImagePath = ImageVariantPaths.createSmallImagePath(this.$props.id);
-      return {
-        largeImagePath,
-        mediumImagePath,
-        smallImagePath
-      }
+    smallSrc: {
+      type: String,
+      required: true
+    },
+    mediumSrc: {
+      type: String,
+      required: false,
+      default: undefined
+    },
+    largeSrc: {
+      type: String,
+      required: false,
+      default: undefined
     }
   }
+}
 </script>
 <style module>
   .picture-container {

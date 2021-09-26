@@ -2,71 +2,75 @@
   <Region :type="'last'">
     <Row>
       <Column :class="$style.spacer" :small="8" :medium="6" :large="6">
-        <Picture :id="$route.params.id" />
+        <Picture
+          :small-src="ImageVariantRoutes
+            .createSmallImagePath($route.params.id)"
+          :medium-src="ImageVariantRoutes
+            .createMediumImagePath($route.params.id)"
+          :large-src="ImageVariantRoutes
+            .createLargeImagePath($route.params.id)"
+        />
       </Column>
       <Column :small="0" :medium="1" :large="1" />
       <Column :small="8" :medium="5" :large="5">
         <Paragraph
+          v-if="imageMetaData.description"
           :class="$style.description"
-          :size="TEXT_SIZES.MEDIUM" 
-          v-if="this.imageMetaData.description"
+          :text-size="TEXT_SIZES.MEDIUM"
         >
-          {{ this.imageMetaData.description }}
+          {{ imageMetaData.description }}
         </Paragraph>
-        <Paragraph :size="TEXT_SIZES.SMALL" :uppercase="true">
-          {{ this.imageMetaData.location.readable }}
+        <Paragraph :text-size="TEXT_SIZES.SMALL" :uppercase="true">
+          {{ imageMetaData.location.readable }}
         </Paragraph>
-        <Paragraph :size="TEXT_SIZES.SMALL" :uppercase="true">
-          {{ this.dateTakenMessage }}
+        <Paragraph :text-size="TEXT_SIZES.SMALL" :uppercase="true">
+          {{ dateTakenMessage }}
         </Paragraph>
       </Column>
     </Row>
   </Region>
 </template>
 <script>
-  import Column from '~/components/atoms/Column';
-  import Row from '~/components/atoms/Row';
-  import Region from '~/components/atoms/Region';
-  import Picture from '~/components/atoms/Picture';
-  import Paragraph, { SIZES } from '~/components/atoms/Paragraph';
-  import ImageService from '~/services/ImageService';
-  import imageCmsContent from '~/static/cms/image.json';
+import Column from '~/components/atoms/Column'
+import Row from '~/components/atoms/Row'
+import Paragraph from '~/components/atoms/Paragraph'
+import Region from '~/components/atoms/Region'
+import Picture from '~/components/atoms/Picture'
+import { SIZES } from '~/mixins/TextSize'
+import ImageVariantRoutes from '~/routes/ImageVariantRoutes'
+import ImageService from '~/services/ImageService'
 
-  export default {
-    asyncData({ params }) {
-      return {
-        imageMetaData: ImageService.getImageMeta(params.id)
-      };
-    },
-    setup() {
-      console.log(this.imageMetaData)
-    },
-    data() {
-      return {
-        daysAgoMessage: null,
-        readableLocation: null,
-        description: null,
-        TEXT_SIZES: SIZES
-      };
-    },
-    created() {
-      const dateTaken = new Date(this.imageMetaData.takenTimestamp);
-      const formatted = dateTaken.toLocaleDateString("en-US", { 
-        weekday: 'long', 
-        year: 'numeric', 
-        month: 'long', 
-        day: 'numeric' 
-      });
-      this.dateTakenMessage = formatted;
-    },
-    components: {
-      Row,
-      Column,
-      Paragraph,
-      Picture,
-      Region
+export default {
+  components: {
+    Row,
+    Column,
+    Paragraph,
+    Picture,
+    Region
+  },
+  asyncData({ params }) {
+    return {
+      imageMetaData: ImageService.getImageMeta(params.id)
     }
+  },
+  data() {
+    return {
+      ImageVariantRoutes,
+      dateTakenMessage: null,
+      TEXT_SIZES: SIZES
+    }
+  },
+  created() {
+    const dateTaken = new Date(this.imageMetaData.takenTimestamp)
+    const formatted = dateTaken.toLocaleDateString('en-US', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    })
+    this.dateTakenMessage = formatted
   }
+}
 </script>
 <style lang="scss" module>
   .description {

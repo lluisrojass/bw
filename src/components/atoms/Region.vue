@@ -1,7 +1,7 @@
 <template>
-  <div 
+  <div
     :class="[
-      $style.region, 
+      $style.region,
       $style[classStyle]
     ]"
   >
@@ -9,27 +9,27 @@
   </div>
 </template>
 <script>
-  export default {
-    props: {
-      type: {
-        type: String,
-        validator: (prop) => [
-          'last', 
-          'no-vertical-margin', 
-          'none'
-        ].indexOf(prop) !== -1,
-        required: false,
-        default: 'none'
-      }
-    },
-    data(props) {
-      return {
-        classStyle: props.type !== 'none'
-          ? `region--${props.type}` 
-          : undefined
-      };
+export default {
+  props: {
+    type: {
+      type: String,
+      validator: prop => [
+        'last',
+        'no-vertical-margin',
+        'none'
+      ].includes(prop),
+      required: false,
+      default: 'none'
+    }
+  },
+  data(props) {
+    return {
+      classStyle: props.type !== 'none'
+        ? `region--${props.type}`
+        : undefined
     }
   }
+}
 </script>
 <style module lang="scss">
   .region {

@@ -5,32 +5,30 @@ export default {
     base: '/bw/'
   },
   head: {
-    title: 'b&w',
+    title: 'Moments In Black & White',
     meta: [
-      { 
-        charset: 'utf-8' 
+      {
+        charset: 'utf-8'
       },
-      { 
-        name: 'viewport', 
-        content: 'width=device-width, initial-scale=1' 
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
       },
-      { 
-        id: 'description', 
-        name: 'description', 
-        content: 'black and white squares from my iPhone' 
+      {
+        id: 'description',
+        name: 'description',
+        content: 'Black and white iPhone pictures.'
       }
     ]
   },
   css: [
     '~/assets/css/fonts.css',
     '~/assets/css/reset.scss',
-    '~/assets/css/styleguide.scss',
+    '~/assets/css/styleguide.scss'
   ],
   pageTransition: 'my-page',
-  plugins: [],
   components: false,
   buildDir: 'build',
-  buildModules: ["@nuxtjs/svg"],
   build: {
     styleResources: {
       scss: './src/assets/css/env.scss'

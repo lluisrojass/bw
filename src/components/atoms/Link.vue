@@ -1,38 +1,30 @@
 <template>
   <NuxtLink
     :to="to"
-    :tabIndex="$props.disabled ? -1 : 0"
+    :tab-index="$props.disabled ? -1 : 0"
     :class="[
       'text',
       $style.link,
-      sizeClass,
-      $props.disabled 
+      textClassSize,
+      textVariantClass,
+      $props.disabled
         ? $style['link--disabled']
         : null,
       $props.isForText
-        ? $style['link--text']
+        ? $style['link--has-text']
         : null,
-      $props.uppercase 
-        ? 'text--uppercase'
-        : null
     ]"
   >
     <slot />
   </NuxtLink>
 </template>
 <script>
+import textSizeMixin from '~/mixins/TextSize'
+import textTransformMixin from '~/mixins/TextTransform'
+
 export default {
+  mixins: [textSizeMixin, textTransformMixin],
   props: {
-    size: {
-      type: String,
-      validator: (prop) => [
-        'large',
-        'small',
-        'none'
-      ].indexOf(prop) !== -1,
-      required: false,
-      default: 'small',
-    },
     disabled: {
       type: Boolean,
       required: false,
@@ -43,26 +35,10 @@ export default {
       required: false,
       default: true
     },
-    uppercase: {
-      type: Boolean,
-      required: false,
-      default: false,
-    },
     to: {
       type: String,
       required: true
     }
-  },
-  data(props) {
-    let sizeClass = ''; 
-    if (props.size === 'large') {
-      sizeClass = 'text--large';
-    } else if (props.size === 'small') {
-      sizeClass = 'text--small';
-    }
-    return {
-      sizeClass,
-    };
   }
 }
 </script>
@@ -76,7 +52,7 @@ export default {
       pointer-events: none;
     }
 
-    &--text {
+    &--has-text {
       &:hover {
         border-bottom: 2px solid $fg-cream;
       }

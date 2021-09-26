@@ -1,8 +1,8 @@
 <template>
-  <Link 
-    :to="href" 
+  <Link
+    :to="href"
     :class="$style.spacing"
-    :isForText="false"
+    :is-for-text="false"
   >
     <Picture
       v-bind="$props"
@@ -11,31 +11,41 @@
   </Link>
 </template>
 <script>
-  import Link from '~/components/atoms/Link';
-  import Picture from '~/components/atoms/Picture';
-  import AppPaths from '~/utils/AppPaths';
+import Link from '~/components/atoms/Link'
+import Picture from '~/components/atoms/Picture'
+import AppRoutes from '~/routes/AppRoutes'
 
-  export default {
-    props: {
-      id: {
-        type: String,
-        required: true
-      },
-      description: {
-        type: String,
-        required: false
-      }
+export default {
+  components: {
+    Picture,
+    Link
+  },
+  props: {
+    description: {
+      type: String,
+      required: false,
+      default: undefined
     },
-    computed: {
-      href: function() {
-        return AppPaths.createInternalImagePath(this.id);
-      }
+    id: {
+      type: String,
+      required: true
     },
-    components: {
-      Picture,
-      Link
+    smallSrc: {
+      type: String,
+      required: true
+    },
+    mediumSrc: {
+      type: String,
+      required: true
     }
-  };
+  },
+  computed: {
+    href() {
+      return AppRoutes
+        .createInternalImagePath(this.id)
+    }
+  }
+}
 </script>
 <style module lang="scss">
   .gallery-picture {
