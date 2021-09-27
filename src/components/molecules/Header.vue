@@ -1,5 +1,5 @@
 <template>
-  <Region :type="REGION_TYPES.NO_VERTICAL_MARGIN" :class="$style.container">
+  <div>
     <Link
       :class="$style.link"
       :to="$props.home.href"
@@ -27,17 +27,15 @@
     >
       {{ about.text }}
     </Link>
-  </Region>
+  </div>
 </template>
 <script>
-import Region, { TYPES } from '~/components/atoms/Region';
 import Link from '~/components/atoms/Link';
 import AppRoutes from '~/routes/AppRoutes';
 
 export default {
   components: {
-    Link,
-    Region
+    Link
   },
   props: {
     home: {
@@ -53,11 +51,6 @@ export default {
       required: true
     }
   },
-  data() {
-    return {
-      REGION_TYPES: TYPES
-    };
-  },
   computed: {
     isAtHomePage() {
       return AppRoutes.isHomePage(this.$route.fullPath);
@@ -72,11 +65,6 @@ export default {
 };
 </script>
 <style module lang="scss">
-  .container {
-    padding-top: 2rem;
-    justify-content: center;
-    display: flex;
-  }
   .link + .link {
     margin-left: 1.5rem;
   }

@@ -31,8 +31,8 @@
   </Region>
 </template>
 <script>
-import Column from '~/components/atoms/Column';
 import Row from '~/components/atoms/Row';
+import Column from '~/components/atoms/Column';
 import Paragraph from '~/components/atoms/Paragraph';
 import Region, { TYPES } from '~/components/atoms/Region';
 import Picture from '~/components/atoms/Picture';

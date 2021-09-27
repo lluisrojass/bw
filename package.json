@@ -18,7 +18,7 @@
     "paginate-monthly": "cross-env PAGE_SIZE=15 node ./scripts/create-monthly-pagination.js",
     "clear-pagination-files": "rimraf ./src/static/page-directories && rimraf ./src/static/pages",
     "paginate": "npm run clear-pagination-files && npm run create-pagination-dirs && npm run paginate-stream && npm run paginate-monthly",
-    "prepare-build": "npm run generate-image-variants && npm run paginate",
+    "prepare-build": "npm run create-image-variants && npm run create-image-meta && npm run paginate",
     "eslint:fix": "eslint --fix './{src,scripts}/**/*.{js,vue}'",
     "eslint": "eslint './{src,scripts}/**/*.{js,vue}'"
   },

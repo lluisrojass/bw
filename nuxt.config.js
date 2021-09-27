@@ -33,6 +33,7 @@ export default {
   components: false,
   buildDir: 'build',
   build: {
+    extractCSS: true,
     styleResources: {
       scss: './src/assets/css/env.scss'
     }

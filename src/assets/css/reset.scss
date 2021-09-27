@@ -12,8 +12,15 @@ html, body {
 body {
   @include font-variant-regular;
   background: $bg-gradient;
-  background-size: 600% 600%;
+  background-size: 1200% 1200%;
   animation: breathe 15s ease infinite;
+  overflow: hidden;
+}
+
+div#__nuxt {
+  overflow: auto;
+  height: 100%;
+  width: 100%;
 }
 
 @keyframes breathe {
