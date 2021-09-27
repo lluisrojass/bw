@@ -9,16 +9,18 @@
       </Heading>
     </Row>
     <Row :class="$style.center">
-      <Link :uppercase="true" :to="errorModel.homeLink.href">
-        {{ errorModel.homeLink.text }}
+      <Link :uppercase="true" :text-size="TEXT_SIZES.MEDIUM" :to="errorModel.reportABug.href">
+        {{ errorModel.reportABug.text }}
       </Link>
     </Row>
+    <Row :class="$style.center" />
   </Region>
 </template>
 <script>
 import Region from '~/components/atoms/Region';
 import Row from '~/components/atoms/Row';
 import Link from '~/components/atoms/Link';
+import { SIZES } from '~/mixins/TextSize';
 import Heading from '~/components/atoms/Heading';
 import errorModel from '~/static/cms/error.json';
 
@@ -38,6 +40,7 @@ export default {
   },
   data() {
     return {
+      TEXT_SIZES: SIZES,
       errorModel
     };
   }

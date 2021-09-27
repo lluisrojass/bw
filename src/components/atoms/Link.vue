@@ -1,6 +1,10 @@
 <template>
-  <NuxtLink
-    :to="to"
+  <component
+    :is="!isExternal ? 'NuxtLink' : 'a'"
+    :to="!isExternal ? to : undefined"
+    :href="isExternal ? to : undefined"
+    :rel="isExternal ? 'noopener noreferrer nofollow' : undefined"
+    :target="isExternal ? 'blank' : undefined"
     :tabIndex="$props.disabled ? -1 : 0"
     :class="[
       'text',
@@ -16,7 +20,7 @@
     ]"
   >
     <slot />
-  </NuxtLink>
+  </component>
 </template>
 <script>
 
@@ -40,6 +44,11 @@ export default {
       type: String,
       required: true
     }
+  },
+  data(props) {
+    return {
+      isExternal: props.to.indexOf('http') === 0
+    };
   }
 };
 </script>

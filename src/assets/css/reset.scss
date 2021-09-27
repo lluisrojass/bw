@@ -9,6 +9,14 @@ html, body {
   height: 100%;
 }
 
+li {
+  list-style-type: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   @include font-variant-regular;
   background: $bg-gradient;
