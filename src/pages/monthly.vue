@@ -8,7 +8,7 @@
   </Region>
 </template>
 <script>
-import MonthlyGallery from '~/components/molecules/MonthlyGallery';
+import MonthlyGallery from '~/components/organisms/MonthlyGallery';
 import Region, { TYPES } from '~/components/atoms/Region';
 import PageService from '~/services/PageService';
 
