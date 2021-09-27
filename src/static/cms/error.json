@@ -1,0 +1,8 @@
+{
+  "404": "404 Not Found",
+  "5xx": "An Error Occurred",
+  "homeLink": {
+    "href": "/",
+    "text": "Go Home" 
+  }
+}

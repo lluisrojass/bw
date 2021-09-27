@@ -5,6 +5,11 @@ module.exports = {
   ],
   rules: {
     'space-before-function-paren': ['error', 'never'],
+    'vue/multiline-html-element-content-newline': ['error', {
+      ignoreWhenEmpty: true,
+      ignores: ['pre', 'textarea', 'Link'],
+      allowEmptyLines: false
+    }],
     semi: ['error', 'always']
   },
   overrides: [

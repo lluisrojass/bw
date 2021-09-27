@@ -5,7 +5,7 @@
     :class="[
       'text',
       $style.link,
-      textClassSize,
+      textSizeClass,
       textVariantClass,
       $props.disabled
         ? $style['link--disabled']

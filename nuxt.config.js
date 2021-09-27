@@ -29,7 +29,7 @@ export default {
     '~/assets/css/reset.scss',
     '~/assets/css/styleguide.scss'
   ],
-  pageTransition: 'my-page',
+  pageTransition: 'fade',
   components: false,
   buildDir: 'build',
   build: {

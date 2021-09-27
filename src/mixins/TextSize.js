@@ -22,7 +22,7 @@ export default {
   },
   data(props) {
     return {
-      textClassSize: CLASS_MAP[props.textSize]
+      textSizeClass: CLASS_MAP[props.textSize]
     };
   }
 };

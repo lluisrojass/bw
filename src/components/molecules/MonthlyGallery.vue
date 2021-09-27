@@ -1,22 +1,20 @@
 <template>
   <div>
-    <div v-for="month in months" :key="month.title" :class="$style.row">
+    <div v-for="month in months" :key="month.title" :class="$style.month">
       <Row>
         <Column
           :small="8"
           :medium="12"
           :large="12"
         >
-          <h1
-            :class="[
-              $style.heading,
-              'text',
-              'text--large',
-              'text--capitalize'
-            ]"
+          <Heading
+            :size="1"
+            :class="$style['header-spacing']"
+            :text-size="TEXT_SIZES.LARGE"
+            :capitalize="true"
           >
             {{ month.title }}
-          </h1>
+          </Heading>
         </Column>
       </Row>
       <Row>
@@ -48,6 +46,8 @@
 <script>
 import Row from '~/components/atoms/Row';
 import Column from '~/components/atoms/Column';
+import Heading from '~/components/atoms/Heading';
+import { SIZES } from '~/mixins/TextSize';
 import GalleryPicture from '~/components/molecules/GalleryPicture';
 import ImageVariantRoutes from '~/routes/ImageVariantRoutes';
 
@@ -55,6 +55,7 @@ export default {
   components: {
     GalleryPicture,
     Column,
+    Heading,
     Row
   },
   props: {
@@ -66,6 +67,7 @@ export default {
   data() {
     return {
       ImageVariantRoutes,
+      TEXT_SIZES: SIZES,
       isLoaderInView: false,
       loadedImages: 0
     };
@@ -105,13 +107,11 @@ export default {
 };
 </script>
 <style lang="scss" module>
-  .row {
+  .month {
     margin-bottom: 2rem;
     width: 100%;
   }
-  .heading {
-    margin-bottom: 0.125rem;
+  .header-spacing {
     padding-left: 0.5rem;
-    letter-spacing: 0px;
   }
 </style>

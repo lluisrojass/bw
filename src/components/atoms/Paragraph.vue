@@ -2,9 +2,9 @@
   <p
     :class="[
       'text',
-      textClassSize,
+      textSizeClass,
+      textVariantClass,
       $style.p,
-      textVariantClass
     ]"
   >
     <slot />

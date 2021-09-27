@@ -5,32 +5,27 @@
       :to="$props.home.href"
       :disabled="isAtHomePage"
       :uppercase="true"
-      size="small"
-    >
-      {{ home.text }}
-    </Link>
+      :text-size="TEXT_SIZES.SMALL"
+    >{{ home.text }}</Link>
     <Link
       :class="$style.link"
       :to="monthly.href"
       :disabled="isAtMonthlyPage"
       :uppercase="true"
-      size="small"
-    >
-      {{ monthly.text }}
-    </Link>
+      :text-size="TEXT_SIZES.SMALL"
+    >{{ monthly.text }}</Link>
     <Link
       :class="$style.link"
       :to="about.href"
       :disabled="isAtAboutPage"
       :uppercase="true"
-      size="small"
-    >
-      {{ about.text }}
-    </Link>
+      :text-size="TEXT_SIZES.SMALL"
+    >{{ about.text }}</Link>
   </div>
 </template>
 <script>
 import Link from '~/components/atoms/Link';
+import { SIZES } from '~/mixins/TextSize';
 import AppRoutes from '~/routes/AppRoutes';
 
 export default {
@@ -50,6 +45,11 @@ export default {
       type: Object,
       required: true
     }
+  },
+  data() {
+    return {
+      TEXT_SIZES: SIZES
+    };
   },
   computed: {
     isAtHomePage() {
