@@ -15,25 +15,26 @@ export default {
   props: {
     small: {
       type: Number,
-      validator: num => num >= 1 && num <= 8,
+      validator: num => num >= 0 && num <= 8,
       required: true
     },
     medium: {
       type: Number,
-      validator: num => num >= 1 && num <= 12,
+      validator: num => num >= 0 && num <= 12,
       required: true
     },
     large: {
       type: Number,
-      validator: num => num >= 1 && num <= 12,
+      validator: num => num >= 0 && num <= 12,
       required: true
     }
   }
-}
+};
 </script>
 <style module lang="scss">
   .col {
     flex-shrink: 0;
+    @include create-col(0, 8, 'sm');
     @include create-col(1, 8, 'sm');
     @include create-col(2, 8, 'sm');
     @include create-col(3, 8, 'sm');
@@ -44,6 +45,7 @@ export default {
     @include create-col(8, 8, 'sm');
 
     @include min-medium {
+      @include create-col(0, 12, 'md');
       @include create-col(1, 12, 'md');
       @include create-col(2, 12, 'md');
       @include create-col(3, 12, 'md');
@@ -59,6 +61,7 @@ export default {
     }
 
     @include min-large {
+      @include create-col(0, 12, 'lg');
       @include create-col(1, 12, 'lg');
       @include create-col(2, 12, 'lg');
       @include create-col(3, 12, 'lg');

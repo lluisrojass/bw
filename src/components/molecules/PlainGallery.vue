@@ -11,16 +11,18 @@
         :id="imageId"
         :small-src="ImageVariantRoutes.createSmallImagePath(imageId)"
         :medium-src="ImageVariantRoutes.createMediumImagePath(imageId)"
+        @load="onImageLoad(imageId)"
+        @error="onImageLoad(imageId)"
       />
     </Column>
-    <div ref="nextPageLoader" :class="$style.invisible" />
+    <div ref="nextPageLoader" class="invisible" />
   </Row>
 </template>
 <script>
-import Row from '~/components/atoms/Row'
-import Column from '~/components/atoms/Column'
-import GalleryPicture from '~/components/molecules/GalleryPicture'
-import ImageVariantRoutes from '~/routes/ImageVariantRoutes'
+import Row from '~/components/atoms/Row';
+import Column from '~/components/atoms/Column';
+import GalleryPicture from '~/components/molecules/GalleryPicture';
+import ImageVariantRoutes from '~/routes/ImageVariantRoutes';
 
 export default {
   components: {
@@ -40,32 +42,42 @@ export default {
   },
   data() {
     return {
-      ImageVariantRoutes
+      ImageVariantRoutes,
+      isLoaderInView: false,
+      loadedImages: 0
+    };
+  },
+  watch: {
+    isLoaderInView(currLoaderInView) {
+      if (!currLoaderInView) { return; }
+
+      this.triggerGetNextPage();
+    },
+    loadedImages(currLoadedImages) {
+      const numImageIds = this.$props.imageIds.length;
+      if (currLoadedImages !== numImageIds || !this.isLoaderInView) { return; }
+
+      this.triggerGetNextPage();
     }
   },
   mounted() {
     const observer = new IntersectionObserver(this.onIntersectionChange, {
       root: null,
       threshold: 0.1
-    })
-    observer.observe(this.$refs.nextPageLoader)
+    });
+    observer.observe(this.$refs.nextPageLoader);
   },
   methods: {
+    triggerGetNextPage() {
+      this.$emit('getNextPage');
+    },
+    onImageLoad(id) {
+      this.loadedImages += 1;
+    },
     onIntersectionChange(entries) {
-      const entry = entries[0]
-      if (
-        !!entry &&
-          entry.isIntersecting &&
-          this.$props.hasNextPage
-      ) {
-        this.$emit('getNextPage')
-      }
+      const entry = entries[0];
+      this.isLoaderInView = !!entry && entry.isIntersecting;
     }
   }
-}
+};
 </script>
-<style lang="scss" module>
-  .invisible {
-    opacity: 0;
-  }
-</style>

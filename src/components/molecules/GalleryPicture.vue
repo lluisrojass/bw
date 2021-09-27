@@ -7,13 +7,15 @@
     <Picture
       v-bind="$props"
       :class="$style['gallery-picture']"
+      @load="$emit('load')"
+      @error="$emit('error')"
     />
   </Link>
 </template>
 <script>
-import Link from '~/components/atoms/Link'
-import Picture from '~/components/atoms/Picture'
-import AppRoutes from '~/routes/AppRoutes'
+import Link from '~/components/atoms/Link';
+import Picture from '~/components/atoms/Picture';
+import AppRoutes from '~/routes/AppRoutes';
 
 export default {
   components: {
@@ -42,10 +44,10 @@ export default {
   computed: {
     href() {
       return AppRoutes
-        .createInternalImagePath(this.id)
+        .createInternalImagePath(this.id);
     }
   }
-}
+};
 </script>
 <style module lang="scss">
   .gallery-picture {
@@ -54,5 +56,11 @@ export default {
   .spacing {
     margin: 0.5rem;
     display: block;
+    animation: fade-in 0.75s;
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0 }
+    to { opacity: 1 }
   }
 </style>

@@ -11,7 +11,7 @@ class AppRoutes {
    * @public
    */
   static isAboutPage(maybeAboutPath) {
-    return maybeAboutPath === AppRoutes.createAboutSlug()
+    return maybeAboutPath === AppRoutes.createAboutSlug();
   }
 
   /**
@@ -23,7 +23,7 @@ class AppRoutes {
    * @public
    */
   static isHomePage(maybeHomePath) {
-    return maybeHomePath === AppRoutes.createHomeSlug()
+    return maybeHomePath === AppRoutes.createHomeSlug();
   }
 
   /**
@@ -35,7 +35,7 @@ class AppRoutes {
    * @public
    */
   static isMonthlyPage(maybeMonthlySlug) {
-    return maybeMonthlySlug === AppRoutes.createMonthlySlug()
+    return maybeMonthlySlug === AppRoutes.createMonthlySlug();
   }
 
   /**
@@ -46,7 +46,7 @@ class AppRoutes {
    * @public
    */
   static createMonthlySlug() {
-    return '/monthly'
+    return '/monthly';
   }
 
   /**
@@ -57,7 +57,7 @@ class AppRoutes {
    * @public
    */
   static createHomeSlug() {
-    return '/'
+    return '/';
   }
 
   /**
@@ -68,7 +68,7 @@ class AppRoutes {
    * @public
    */
   static createAboutSlug() {
-    return '/about'
+    return '/about';
   }
 
   /**
@@ -79,7 +79,7 @@ class AppRoutes {
    * @public
    */
   static createAppPrefix() {
-    return '/bw'
+    return '/bw';
   };
 
   /**
@@ -90,7 +90,7 @@ class AppRoutes {
    * @public
    */
   static createImageSlug() {
-    return '/images'
+    return '/images';
   }
 
   /**
@@ -104,7 +104,7 @@ class AppRoutes {
     return [
       AppRoutes.createAppPrefix(),
       AppRoutes.createImageSlug()
-    ].join('')
+    ].join('');
   }
 
   /**
@@ -119,8 +119,8 @@ class AppRoutes {
     return [
       '/image',
       `/${id}`
-    ].join('')
+    ].join('');
   }
 };
 
-export default AppRoutes
+export default AppRoutes;

@@ -1,5 +1,5 @@
 <template>
-  <Region type="last">
+  <Region :type="REGION_TYPES.LAST">
     <PlainGallery
       :image-ids="imageIds"
       :has-next-page="hasNextPage"
@@ -8,9 +8,9 @@
   </Region>
 </template>
 <script>
-import PlainGallery from '~/components/molecules/PlainGallery'
-import Region from '~/components/atoms/Region'
-import PageService from '~/services/PageService'
+import PlainGallery from '~/components/molecules/PlainGallery';
+import Region, { TYPES } from '~/components/atoms/Region';
+import PageService from '~/services/PageService';
 
 export default {
   components: {
@@ -20,26 +20,29 @@ export default {
   asyncData(context) {
     return {
       currentPage: 1,
-      imageIds: PageService.getPage(1)
-    }
+      imageIds: PageService.getPhotostreamPage(1)
+    };
   },
   data() {
     return {
-      imageIds: this.imageIds
-    }
+      imageIds: this.imageIds,
+      REGION_TYPES: TYPES
+    };
   },
   computed: {
     hasNextPage() {
-      return PageService.has(this.currentPage + 1)
+      return PageService.hasPhotostreamPage(this.currentPage + 1);
     }
   },
   methods: {
     getNextPage() {
-      const nextPage = this.currentPage + 1
-      const nextPageImageIds = PageService.getPage(nextPage)
-      this.imageIds = this.imageIds.concat(nextPageImageIds)
-      this.currentPage = nextPage
+      if (!this.hasNextPage) { return; }
+
+      const nextPage = this.currentPage + 1;
+      const nextPageImageIds = PageService.getPhotostreamPage(nextPage);
+      this.imageIds = this.imageIds.concat(nextPageImageIds);
+      this.currentPage = nextPage;
     }
   }
-}
+};
 </script>

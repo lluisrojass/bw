@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     :to="to"
-    :tab-index="$props.disabled ? -1 : 0"
+    :tabIndex="$props.disabled ? -1 : 0"
     :class="[
       'text',
       $style.link,
@@ -9,18 +9,19 @@
       textVariantClass,
       $props.disabled
         ? $style['link--disabled']
-        : null,
+        : '',
       $props.isForText
         ? $style['link--has-text']
-        : null,
+        : '',
     ]"
   >
     <slot />
   </NuxtLink>
 </template>
 <script>
-import textSizeMixin from '~/mixins/TextSize'
-import textTransformMixin from '~/mixins/TextTransform'
+
+import textSizeMixin from '~/mixins/TextSize';
+import textTransformMixin from '~/mixins/TextTransform';
 
 export default {
   mixins: [textSizeMixin, textTransformMixin],
@@ -40,7 +41,7 @@ export default {
       required: true
     }
   }
-}
+};
 </script>
 <style lang="scss" module>
   .link {
@@ -64,7 +65,7 @@ export default {
     }
   }
 
-  .link--disabled.link--text {
+  .link--disabled.link--has-text {
     border-bottom: 2px solid $fg-cream;
   }
 </style>

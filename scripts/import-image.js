@@ -1,71 +1,75 @@
-const crypto = require('crypto')
-const { resolve, join } = require('path')
-const { exec } = require('child_process')
-const { readFileSync, writeFileSync } = require('fs')
-const assert = require('assert')
-const yaml = require('yaml')
-const Paths = require('./utils/Paths')
+const crypto = require('crypto');
+const assert = require('assert');
+const Site = require('./utils/Site');
+const LocalRepoRoutes = require('./routes/LocalRepoRoutes');
+const Shell = require('./utils/Shell');
+const Exif = require('./utils/Exif');
 
-const parseSiteYmlFile = () => {
-  const path = Paths.getSiteYamlFilePath()
-  const file = readFileSync(path, { encoding: 'utf-8' })
-  return yaml.parse(file)
-}
+const createImageEntry = (id, exifData) => {
+  const altitude = (!!exifData && !!exifData.gps && exifData.gps.GPSAltitude) || null;
+  const lat = (!!exifData && !!exifData.gps && exifData.gps.GPSLatitude) || null;
+  const lon = (!!exifData && !!exifData.gps && exifData.gps.GPSLongitude) || null;
+  const latRef = (!!exifData && !!exifData.gps && exifData.gps.GPSLatitudeRef) || null;
+  const lonRef = (!!exifData && !!exifData.gps && exifData.gps.GPSLongitudeRef) || null;
 
-const createEmptyImageEntry = id => ({
-  id,
-  takenTimestamp: null,
-  importTimestamp: Date.now(),
-  description: null,
-  location: null
-})
+  let decimalLat;
+  let decimalLon;
 
-const appendEmptyEntry = (siteYml, id) => {
-  const imageEntry = createEmptyImageEntry(id)
-  const siteYmlCopy = { ...siteYml }
+  const currentTimezone = typeof Intl === 'object'
+    ? Intl.DateTimeFormat().resolvedOptions().timeZone
+    : 'America/New_York';
 
-  siteYmlCopy.images = siteYmlCopy.images || []
-  siteYmlCopy.images.push(imageEntry)
+  if (Array.isArray(lat) && !!latRef) {
+    decimalLat = lat[0] + (lat[1] / 60) + (lat[2] / 3600);
+    if (latRef.toUpperCase() !== 'N') {
+      decimalLat = -decimalLat;
+    }
+  }
 
-  return siteYmlCopy
-}
+  if (Array.isArray(lon) && !!lonRef) {
+    decimalLon = lon[0] + (lon[1] / 60) + (lon[2] / 3600);
+    if (lonRef.toUpperCase() !== 'E') {
+      decimalLon = -decimalLon;
+    }
+  }
 
-const overwriteSiteYml = (newSiteYmlObject) => {
-  const path = Paths.getSiteYamlFilePath()
-  const contents = yaml.stringify(newSiteYmlObject)
-  writeFileSync(path, contents)
-}
+  return {
+    id,
+    takenTimestamp: null,
+    importTimestamp: Date.now(),
+    description: null,
+    location: {
+      altitude,
+      lat: decimalLat,
+      lon: decimalLon,
+      timeZone: currentTimezone,
+      readable: null
+    }
+  };
+};
 
-const moveFile = (fromPath, toPath) => {
-  return new Promise((resolve, reject) => {
-    exec(`cp ${fromPath} ${toPath}`, (error, stderr, stdout) => {
-      if (error) {
-        reject(error)
-        return
-      } else if (stderr) {
-        reject(new Error(stderr))
-        return
-      } else if (stdout) {
-        console.log(stdout)
-      }
+const appendEmptyEntry = (siteYml, imageEntry) => {
+  const siteYmlCopy = { ...siteYml };
 
-      resolve()
-    })
-  })
+  siteYmlCopy.images = siteYmlCopy.images || [];
+  siteYmlCopy.images.push(imageEntry);
+
+  return siteYmlCopy;
 };
 
 (async() => {
-  const sourceFilePath = process.argv[2]
-  assert(sourceFilePath, 'Missing source file path argument')
+  const sourceFilePath = process.argv[2];
+  assert(sourceFilePath, 'Missing source file path argument');
 
-  const targetDir = resolve(__dirname, '../images')
-  const fileId = crypto.randomBytes(6).toString('hex')
-  const targetPath = join(targetDir, `${fileId}.jpeg`)
+  const fileId = crypto.randomBytes(6).toString('hex');
+  const targetPath = LocalRepoRoutes
+    .getPrivateImageAssetPath(`${fileId}.jpeg`);
+  const siteYaml = Site.getSiteYaml();
+  await Shell.moveFile(sourceFilePath, targetPath);
 
-  await moveFile(sourceFilePath, targetPath)
+  const imageExifData = await Exif.getExifData(targetPath);
+  const imageEntry = createImageEntry(fileId, imageExifData);
+  const modifiedSiteYmlObject = appendEmptyEntry(siteYaml, imageEntry);
 
-  const siteYamlObject = parseSiteYmlFile()
-  const modifiedSiteYmlObject = appendEmptyEntry(siteYamlObject, fileId)
-
-  overwriteSiteYml(modifiedSiteYmlObject)
-})()
+  Site.writeSiteYaml(modifiedSiteYmlObject);
+})();

@@ -48,6 +48,10 @@
   }
 }
 
+.invisible {
+  opacity: 0;
+}
+
 /* transitions */
 .my-page-enter-active,
 .my-page-leave-active {

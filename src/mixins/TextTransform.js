@@ -12,15 +12,15 @@ export default {
     }
   },
   data(props) {
-    let textVariantClass = ''
+    let textVariantClass = '';
     if (props.uppercase) {
-      textVariantClass = 'text--uppercase'
+      textVariantClass = 'text--uppercase';
     } else if (props.capitalize) {
-      textVariantClass = 'text--capitalize'
+      textVariantClass = 'text--capitalize';
     }
 
     return {
       textVariantClass
-    }
+    };
   }
-}
+};

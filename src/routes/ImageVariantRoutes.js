@@ -1,4 +1,4 @@
-import AppRoutes from './AppRoutes'
+import AppRoutes from './AppRoutes';
 
 /**
  * Utilities to create image variant paths
@@ -15,7 +15,7 @@ class ImageVariantRoutes {
     return [
       AppRoutes.createImageDirPath(),
       '/large'
-    ].join('')
+    ].join('');
   }
 
   /**
@@ -29,7 +29,7 @@ class ImageVariantRoutes {
     return [
       AppRoutes.createImageDirPath(),
       '/small'
-    ].join('')
+    ].join('');
   }
 
   /**
@@ -43,7 +43,7 @@ class ImageVariantRoutes {
     return [
       AppRoutes.createImageDirPath(),
       '/medium'
-    ].join('')
+    ].join('');
   }
 
   /**
@@ -58,7 +58,7 @@ class ImageVariantRoutes {
     return [
       ImageVariantRoutes.createLargeImageDirPath(),
       `/${id}.jpeg`
-    ].join('')
+    ].join('');
   }
 
   /**
@@ -73,7 +73,7 @@ class ImageVariantRoutes {
     return [
       ImageVariantRoutes.createMediumImageDirPath(),
       `/${id}.jpeg`
-    ].join('')
+    ].join('');
   }
 
   /**
@@ -88,8 +88,8 @@ class ImageVariantRoutes {
     return [
       ImageVariantRoutes.createSmallImageDirPath(),
       `/${id}.jpeg`
-    ].join('')
+    ].join('');
   }
 }
 
-export default ImageVariantRoutes
+export default ImageVariantRoutes;

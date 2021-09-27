@@ -19,6 +19,8 @@
         :src="largeSrc || mediumSrc || smallSrc"
         :alt="description"
         loading="lazy"
+        @load="$emit('load')"
+        @error="$emit('error')"
       >
     </picture>
   </div>
@@ -46,7 +48,7 @@ export default {
       default: undefined
     }
   }
-}
+};
 </script>
 <style module>
   .picture-container {

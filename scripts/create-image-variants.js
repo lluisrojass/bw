@@ -1,73 +1,79 @@
-const { resolve } = require('path')
-const { readdirSync } = require('fs')
-const jimp = require('jimp')
-const Batch = require('./utils/Batch')
+const { resolve } = require('path');
+const { readdirSync } = require('fs');
+const jimp = require('jimp');
+const Batch = require('./utils/Batch');
+const LocalRepoRoutes = require('./routes/LocalRepoRoutes');
 
-const batch = new Batch()
-
-const createImagesDir = () => resolve(
-  __dirname,
-  '../images'
-)
-
-const createBuildImageDir = () => resolve(
-  __dirname,
-  '../src/static/images'
-)
-
-const createSmallVariantPath = fileName => resolve(
-  createBuildImageDir(),
-  './small',
-  fileName
-)
-
-const createLargeVariantPath = fileName => resolve(
-  createBuildImageDir(),
-  './large',
-  fileName
-)
-
-const createMediumVariantPath = fileName => resolve(
-  createBuildImageDir(),
-  './medium',
-  fileName
-)
+const batch = new Batch();
 
 const emitImageVariant = async(sourcePath, targetPath, resize) => {
-  const file = await jimp.read(sourcePath)
+  const file = await jimp.read(sourcePath);
   file
     .resize(resize.width, resize.height)
-    .write(targetPath)
-}
+    .write(targetPath);
+};
+
+const emitSmallImage = async(fileName) => {
+  const sourceImagePath = LocalRepoRoutes
+    .getPrivateImageAssetPath(fileName);
+  const smallTargetImagePath = LocalRepoRoutes
+    .getPublicImageSmallVariantAssetPath(fileName);
+
+  await emitImageVariant(
+    sourceImagePath,
+    smallTargetImagePath,
+    { width: 500, height: 500 }
+  );
+};
+
+const emitMediumImage = async(fileName) => {
+  const sourceImagePath = LocalRepoRoutes
+    .getPrivateImageAssetPath(fileName);
+  const mediumTargetImagePath = LocalRepoRoutes
+    .getPublicImageMediumVariantAssetPath(fileName);
+
+  await emitImageVariant(
+    sourceImagePath,
+    mediumTargetImagePath,
+    { width: 800, height: 800 }
+  );
+};
+
+const emitLargeImage = async(fileName) => {
+  const sourceImagePath = LocalRepoRoutes
+    .getPrivateImageAssetPath(fileName);
+  const largeTargetImagePath = LocalRepoRoutes
+    .getPublicImageLargeVariantAssetPath(fileName);
+
+  await emitImageVariant(
+    sourceImagePath,
+    largeTargetImagePath,
+    { width: 1500, height: 1500 }
+  );
+};
 
 const resizeImage = async(fileName) => {
-  const imagesDir = createImagesDir()
+  batch.addTask(3);
 
-  batch.addTask(3)
+  console.log(`- processing \`${fileName}\``);
 
-  console.log(`- processing \`${fileName}\``)
-  const sourceImagePath = resolve(imagesDir, fileName)
+  await emitSmallImage(fileName);
+  console.log(`- (√) \`${fileName}\` (small)`);
 
-  const smallTargetImagePath = createSmallVariantPath(fileName)
-  await emitImageVariant(sourceImagePath, smallTargetImagePath, { width: 500, height: 500 })
-  console.log(`- (√) \`${fileName}\` (small)`)
+  await emitMediumImage(fileName);
+  console.log(`- (√) \`${fileName}\` (medium)`);
 
-  const mediumTargetImagePath = createMediumVariantPath(fileName)
-  await emitImageVariant(sourceImagePath, mediumTargetImagePath, { width: 800, height: 800 })
-  console.log(`- (√) \`${fileName}\` (medium)`)
+  await emitLargeImage(fileName);
+  console.log(`- (√) \`${fileName}\` (large)`);
 
-  const largeTargetImagePath = createLargeVariantPath(fileName)
-  await emitImageVariant(sourceImagePath, largeTargetImagePath, { width: 1500, height: 1500 })
-  console.log(`- (√) \`${fileName}\` (large)`)
-
-  batch.completeTask(3)
-}
+  batch.completeTask(3);
+};
 
 (() => {
-  batch.start()
+  batch.start();
 
-  const imageDirPath = resolve(__dirname, '../images')
-  const files = readdirSync(imageDirPath)
+  const imageDirPath = resolve(__dirname, '../images');
+  const files = readdirSync(imageDirPath);
 
-  files.forEach(resizeImage)
-})()
+  files.forEach(resizeImage);
+})();

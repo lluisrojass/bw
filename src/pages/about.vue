@@ -12,12 +12,12 @@
   </Region>
 </template>
 <script>
-import Region from '~/components/atoms/Region'
-import Row from '~/components/atoms/Row'
-import Column from '~/components/atoms/Column'
-import Paragraph from '~/components/atoms/Paragraph'
-import about from '~/static/cms/about.json'
-import { SIZES } from '~/mixins/TextSize'
+import Region from '~/components/atoms/Region';
+import Row from '~/components/atoms/Row';
+import Column from '~/components/atoms/Column';
+import Paragraph from '~/components/atoms/Paragraph';
+import about from '~/static/cms/about.json';
+import { SIZES } from '~/mixins/TextSize';
 
 export default {
   components: {
@@ -30,7 +30,7 @@ export default {
     return {
       about: JSON.parse(JSON.stringify(about)),
       TEXT_SIZES: SIZES
-    }
+    };
   }
-}
+};
 </script>

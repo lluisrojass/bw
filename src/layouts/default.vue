@@ -5,8 +5,8 @@
   </div>
 </template>
 <script>
-import Header from '~/components/molecules/Header'
-import headerData from '~/static/cms/header.json'
+import Header from '~/components/molecules/Header';
+import headerData from '~/static/cms/header.json';
 
 export default {
   components: {
@@ -15,7 +15,7 @@ export default {
   data() {
     return {
       header: headerData
-    }
+    };
   }
-}
+};
 </script>

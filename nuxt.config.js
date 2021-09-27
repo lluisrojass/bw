@@ -21,6 +21,9 @@ export default {
       }
     ]
   },
+  generate: {
+    dir: 'bw'
+  },
   css: [
     '~/assets/css/fonts.css',
     '~/assets/css/reset.scss',
@@ -34,4 +37,4 @@ export default {
       scss: './src/assets/css/env.scss'
     }
   }
-}
+};

@@ -1,5 +1,5 @@
 <template>
-  <Region :type="'last'">
+  <Region :type="REGION_TYPES.LAST">
     <Row>
       <Column :class="$style.spacer" :small="8" :medium="6" :large="6">
         <Picture
@@ -31,14 +31,14 @@
   </Region>
 </template>
 <script>
-import Column from '~/components/atoms/Column'
-import Row from '~/components/atoms/Row'
-import Paragraph from '~/components/atoms/Paragraph'
-import Region from '~/components/atoms/Region'
-import Picture from '~/components/atoms/Picture'
-import { SIZES } from '~/mixins/TextSize'
-import ImageVariantRoutes from '~/routes/ImageVariantRoutes'
-import ImageService from '~/services/ImageService'
+import Column from '~/components/atoms/Column';
+import Row from '~/components/atoms/Row';
+import Paragraph from '~/components/atoms/Paragraph';
+import Region, { TYPES } from '~/components/atoms/Region';
+import Picture from '~/components/atoms/Picture';
+import { SIZES } from '~/mixins/TextSize';
+import ImageVariantRoutes from '~/routes/ImageVariantRoutes';
+import ImageService from '~/services/ImageService';
 
 export default {
   components: {
@@ -51,26 +51,28 @@ export default {
   asyncData({ params }) {
     return {
       imageMetaData: ImageService.getImageMeta(params.id)
-    }
+    };
   },
   data() {
     return {
       ImageVariantRoutes,
       dateTakenMessage: null,
-      TEXT_SIZES: SIZES
-    }
+      TEXT_SIZES: SIZES,
+      REGION_TYPES: TYPES
+    };
   },
   created() {
-    const dateTaken = new Date(this.imageMetaData.takenTimestamp)
+    const dateTaken = new Date(this.imageMetaData.takenTimestamp);
     const formatted = dateTaken.toLocaleDateString('en-US', {
       weekday: 'long',
       year: 'numeric',
       month: 'long',
-      day: 'numeric'
-    })
-    this.dateTakenMessage = formatted
+      day: 'numeric',
+      timeZone: this.imageMetaData.timeZone
+    });
+    this.dateTakenMessage = formatted;
   }
-}
+};
 </script>
 <style lang="scss" module>
   .description {

@@ -4,7 +4,8 @@ module.exports = {
     '@nuxtjs'
   ],
   rules: {
-    'space-before-function-paren': ['error', 'never']
+    'space-before-function-paren': ['error', 'never'],
+    semi: ['error', 'always']
   },
   overrides: [
     {
@@ -12,6 +13,12 @@ module.exports = {
       rules: {
         'no-console': 'off'
       }
+    },
+    {
+      files: ['src/**/Link.vue'],
+      rules: {
+        'vue/attribute-hyphenation': 'off'
+      }
     }
   ]
-}
+};

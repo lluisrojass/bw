@@ -9,27 +9,33 @@
   </div>
 </template>
 <script>
+
+export const TYPES = {
+  NO_VERTICAL_MARGIN: 0x1,
+  LAST: 0x2,
+  NONE: 0x0
+};
+
+const REGION_CLASS_NAMES = {
+  [TYPES.NO_VERTICAL_MARGIN]: 'region--no-vertical-margin',
+  [TYPES.LAST]: 'region--last'
+};
+
 export default {
   props: {
     type: {
-      type: String,
-      validator: prop => [
-        'last',
-        'no-vertical-margin',
-        'none'
-      ].includes(prop),
+      type: Number,
+      validator: prop => Object.values(TYPES).includes(prop),
       required: false,
-      default: 'none'
+      default: TYPES.NONE
     }
   },
   data(props) {
     return {
-      classStyle: props.type !== 'none'
-        ? `region--${props.type}`
-        : undefined
-    }
+      classStyle: REGION_CLASS_NAMES[props.type]
+    };
   }
-}
+};
 </script>
 <style module lang="scss">
   .region {

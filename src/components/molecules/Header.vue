@@ -1,5 +1,5 @@
 <template>
-  <Region type="no-vertical-margin" :class="$style.container">
+  <Region :type="REGION_TYPES.NO_VERTICAL_MARGIN" :class="$style.container">
     <Link
       :class="$style.link"
       :to="$props.home.href"
@@ -30,9 +30,9 @@
   </Region>
 </template>
 <script>
-import Region from '~/components/atoms/Region'
-import Link from '~/components/atoms/Link'
-import AppRoutes from '~/routes/AppRoutes'
+import Region, { TYPES } from '~/components/atoms/Region';
+import Link from '~/components/atoms/Link';
+import AppRoutes from '~/routes/AppRoutes';
 
 export default {
   components: {
@@ -53,18 +53,23 @@ export default {
       required: true
     }
   },
+  data() {
+    return {
+      REGION_TYPES: TYPES
+    };
+  },
   computed: {
     isAtHomePage() {
-      return AppRoutes.isHomePage(this.$route.fullPath)
+      return AppRoutes.isHomePage(this.$route.fullPath);
     },
     isAtAboutPage() {
-      return AppRoutes.isAboutPage(this.$route.fullPath)
+      return AppRoutes.isAboutPage(this.$route.fullPath);
     },
     isAtMonthlyPage() {
-      return AppRoutes.isMonthlyPage(this.$route.fullPath)
+      return AppRoutes.isMonthlyPage(this.$route.fullPath);
     }
   }
-}
+};
 </script>
 <style module lang="scss">
   .container {

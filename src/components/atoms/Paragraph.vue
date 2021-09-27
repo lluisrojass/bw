@@ -11,12 +11,12 @@
   </p>
 </template>
 <script>
-import textSizeMixin from '~/mixins/TextSize'
-import textTransformMixin from '~/mixins/TextTransform'
+import textSizeMixin from '~/mixins/TextSize';
+import textTransformMixin from '~/mixins/TextTransform';
 
 export default {
   mixins: [textSizeMixin, textTransformMixin]
-}
+};
 </script>
 <style lang="scss" module>
   .p {
