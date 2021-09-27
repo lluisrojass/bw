@@ -56,8 +56,10 @@ export default {
   .link {
     text-decoration: none;
     border-bottom: 2px solid transparent;
+    cursor: pointer;
 
     &--disabled {
+      cursor: auto;
       opacity: 0.5;
       pointer-events: none;
     }

@@ -32,21 +32,6 @@
   }
 }
 
-.link {
-  text-decoration: none;
-
-  &--text {
-    &:hover {
-      border-bottom: 1px solid $fg-cream;
-    }
-  }
-
-  &:active,
-  &:focus {
-    outline-color: $fg-accent;
-  }
-}
-
 .invisible {
   opacity: 0;
 }
