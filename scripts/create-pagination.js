@@ -1,8 +1,6 @@
-const { writeFile } = require('fs');
 const md5 = require('md5');
 const Site = require('./utils/Site');
 const Batch = require('./utils/Batch');
-const LocalRepoRoutes = require('./routes/LocalRepoRoutes');
 const Page = require('./utils/Page');
 
 const batch = new Batch();
