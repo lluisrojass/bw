@@ -22,7 +22,7 @@ export default {
     ]
   },
   generate: {
-    dir: 'bw'
+    dir: 'build'
   },
   css: [
     '~/assets/css/fonts.css',
