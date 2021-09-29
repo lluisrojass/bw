@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/image/983597645e20", {data:[{imageMetaData:{id:"983597645e20",takenTimestamp:1624730606000,importTimestamp:1630969309012,description:null,location:{readable:"Coney Island, Brooklyn, New York"}}}],fetch:{},mutations:void 0});

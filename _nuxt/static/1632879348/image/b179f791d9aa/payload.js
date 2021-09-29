@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/image/b179f791d9aa", {data:[{imageMetaData:{id:"b179f791d9aa",takenTimestamp:1631384957000,importTimestamp:1632585463198,description:null,location:{lat:"40° 33' 53.028\" N",lon:"73° 52' 38.508\" W",timeZone:"America\u002FNew_York",readable:"Fort Tilden, Queens, New York"}}}],fetch:{},mutations:void 0});

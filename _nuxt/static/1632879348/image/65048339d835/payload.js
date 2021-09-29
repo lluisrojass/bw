@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/image/65048339d835", {data:[{imageMetaData:{id:"65048339d835",takenTimestamp:1630711260000,importTimestamp:1630970766251,description:null,location:{lat:"40° 38' 38.718\" N",lon:"73° 57' 59.1\" W",timeZone:"America\u002FNew_York",readable:"Ditmas Park, Brooklyn, New York"}}}],fetch:{},mutations:void 0});
