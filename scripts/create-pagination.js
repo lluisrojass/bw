@@ -3,8 +3,8 @@ const Site = require('./utils/Site');
 const Batch = require('./utils/Batch');
 const Page = require('./utils/Page');
 
-const batch = new Batch();
 const pageSize = Number(process.env.PAGE_SIZE);
+const batch = new Batch();
 
 const createPageFileSlug = id => `${id}.json`;
 
