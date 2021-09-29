@@ -2,6 +2,8 @@
 
 A diary of pictures taken by yours truly.
 
+View here: https://lluisrojass.github.io/bw/
+
 # Scripts 
 
 ## `npm run import-image` 

@@ -1,3 +1,6 @@
+import AppRoutes from './src/routes/AppRoutes';
+import imageIds from './scripts/get-image-ids';
+
 export default {
   target: 'static',
   srcDir: './src',
@@ -22,7 +25,9 @@ export default {
     ]
   },
   generate: {
-    dir: 'build'
+    dir: 'build',
+    fallback: '404.html',
+    routes: imageIds.map(id => AppRoutes.createInternalImagePath(id))
   },
   css: [
     '~/assets/css/fonts.css',
