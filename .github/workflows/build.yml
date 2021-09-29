@@ -22,9 +22,9 @@ jobs:
       - run: npm run prepare-build
       - run: npm run generate
       - name: deploy
-          uses: peaceiris/actions-gh-pages@v3
-          if: ${{ github.ref == 'refs/heads/main' }}
-          with:
-            publish_branch: gh-pages
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_dir: ./build
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
