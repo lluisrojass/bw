@@ -1,0 +1,12 @@
+{
+    "id": "c38784ffbbad",
+    "takenTimestamp": 1622080869000,
+    "importTimestamp": 1630968631850,
+    "description": null,
+    "location": {
+        "lat": "40° 42' 22.95\" N",
+        "lon": "73° 59' 25.368\" W",
+        "timeZone": "America/New_York",
+        "readable": "Manhattan Bridge, New York, New York"
+    }
+}

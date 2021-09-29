@@ -1,0 +1,6 @@
+{
+  "daysAgo": {
+    "lessThan24Hours": "Taken Less Than 24 Hours Ago",
+    "multi": "Taken ${days} Days Ago"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "home": {
+    "href": "/",
+    "text": "Home"
+  },
+  "about": {
+    "href": "/about",
+    "text": "About"
+  },
+  "monthly": {
+    "href": "/monthly",
+    "text": "Monthly Stream"
+  }
+}

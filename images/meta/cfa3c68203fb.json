@@ -1,0 +1,12 @@
+{
+    "id": "cfa3c68203fb",
+    "takenTimestamp": 1624482628000,
+    "importTimestamp": 1630968874226,
+    "description": null,
+    "location": {
+        "lat": "40° 39' 30.792\" N",
+        "lon": "73° 58' 6.18\" W",
+        "timeZone": "America/New_York",
+        "readable": "Prospect Park, Brooklyn, New York"
+    }
+}
