@@ -22,6 +22,13 @@ export default {
         name: 'description',
         content: 'Black and white iPhone pictures.'
       }
+    ],
+    link: [
+      {
+        rel: 'shortcut icon',
+        type: 'image/x-icon',
+        href: 'favicon.ico'
+      }
     ]
   },
   generate: {
