@@ -5,8 +5,8 @@ images:
     importTimestamp: 1630967596247
     description: null
     location:
-      lat: 40° 39' 38.76" N
-      lon: 73° 58' 43.92" W
+      lat: 40.660767
+      lon: -73.978867
       timeZone: America/New_York
       readable: Prospect Park, Brooklyn, NY
   - id: c38784ffbbad
@@ -14,8 +14,8 @@ images:
     importTimestamp: 1630968631850
     description: null
     location:
-      lat: 40° 42' 22.95" N
-      lon: 73° 59' 25.368" W
+      lat: 40.706375
+      lon: -73.99038
       timeZone: America/New_York
       readable: Manhattan Bridge, New York, New York
   - id: 74c0d9d9adf9
@@ -23,8 +23,8 @@ images:
     importTimestamp: 1630968749009
     description: null
     location:
-      lat: 40° 38' 24.24" N
-      lon: 73° 58' 1.65" W
+      lat: 40.640067
+      lon: -73.967125
       timeZone: America/New_York
       readable: Cortelyou Road, Brooklyn, New York
   - id: cfa3c68203fb
@@ -32,8 +32,8 @@ images:
     importTimestamp: 1630968874226
     description: null
     location:
-      lat: 40° 39' 30.792" N
-      lon: 73° 58' 6.18" W
+      lat: 40.658553
+      lon: -73.968383
       timeZone: America/New_York
       readable: Prospect Park, Brooklyn, New York
   - id: 3777ba216260
@@ -41,8 +41,8 @@ images:
     importTimestamp: 1630968993974
     description: null
     location:
-      lat: 40° 39' 30.378" N
-      lon: 73° 58' 5.88" W
+      lat: 40.658438
+      lon: -73.9683
       timeZone: America/New_York
       readable: Prospect Park, Brooklyn, New York
   - id: 46ac75b298ee
@@ -50,8 +50,8 @@ images:
     importTimestamp: 1630969210958
     description: null
     location:
-      lat: 40° 38' 25.512" N
-      lon: 73° 57' 54.87" W
+      lat: 40.64042
+      lon: -73.965242
       timeZone: America/New_York
       readable: Ditmas Park, Brooklyn, New York
   - id: "983597645e20"
@@ -65,8 +65,8 @@ images:
     importTimestamp: 1630969443855
     description: null
     location:
-      lat: 40° 44' 8.232" N
-      lon: 73° 59' 23.748" W
+      lat: 40.73562
+      lon: -73.98993
       timeZone: America/New_York
       readable: Union Square Park, New York, New York
   - id: d8349e0fdb1d
@@ -74,8 +74,8 @@ images:
     importTimestamp: 1630969615839
     description: null
     location:
-      lat: 40° 44' 8.268" N
-      lon: 73° 59' 23.688" W
+      lat: 40.73563
+      lon: -73.989913
       timeZone: America/New_York
       readable: Union Square Park, New York, New York
   - id: ab2b0a57470a
@@ -83,8 +83,8 @@ images:
     importTimestamp: 1630970267603
     description: null
     location:
-      lat: 40° 34' 27.12" N
-      lon: 73° 58' 24.912" W
+      lat: 40.5742
+      lon: -73.973587
       timeZone: America/New_York
       readable: New York Aquarium, Brooklyn, New York
   - id: 9656212ea3f2
@@ -92,8 +92,8 @@ images:
     importTimestamp: 1630970343561
     description: null
     location:
-      lat: 40° 34' 28.05" N
-      lon: 73° 58' 25.128" W
+      lat: 40.574458
+      lon: -73.973647
       timeZone: America/New_York
       readable: New York Aquarium, Brooklyn, New York
   - id: 8332e3dc3ffa
@@ -101,8 +101,8 @@ images:
     importTimestamp: 1630970409789
     description: null
     location:
-      lat: 44° 31' 43.992" N
-      lon: 73° 27' 40.032" W
+      lat: 44.528887
+      lon: -73.46112
       timeZone: America/New_York
       readable: Ausable Chasm, New York
   - id: b17f5e5865cc
@@ -110,8 +110,8 @@ images:
     importTimestamp: 1630970492380
     description: null
     location:
-      lat: 40° 39' 38.382" N
-      lon: 73° 57' 57.15" W
+      lat: 40.660662
+      lon: -73.965875
       timeZone: America/New_York
       readable: Prospect Park, Brooklyn, New York
   - id: 09e30ac459b5
@@ -119,8 +119,8 @@ images:
     importTimestamp: 1630970551284
     description: null
     location:
-      lat: 40° 38' 24.672" N
-      lon: 73° 57' 55.83" W
+      lat: 40.640187
+      lon: -73.965508
       timeZone: America/New_York
       readable: Ditmas Park, Brooklyn, New York
   - id: f77b2837485c
@@ -128,8 +128,8 @@ images:
     importTimestamp: 1630970606418
     description: null
     location:
-      lat: 40° 38' 24.672" N
-      lon: 73° 57' 56.13" W
+      lat: 40.640187
+      lon: -73.965592
       timeZone: America/New_York
       readable: Ditmas Park, Brooklyn, New York
   - id: 566221041bc3
@@ -137,8 +137,8 @@ images:
     importTimestamp: 1630970693351
     description: null
     location:
-      lat: 41° 56' 47.892" N
-      lon: 74° 0' 20.96" W
+      lat: 41.946637
+      lon: -74.005822
       timeZone: America/New_York
       readable: Kingston, New York
   - id: 65048339d835
@@ -146,8 +146,8 @@ images:
     importTimestamp: 1630970766251
     description: null
     location:
-      lat: 40° 38' 38.718" N
-      lon: 73° 57' 59.1" W
+      lat: 40.644088
+      lon: -73.966417
       timeZone: America/New_York
       readable: Ditmas Park, Brooklyn, New York
   - id: e587cedd4091
@@ -155,8 +155,8 @@ images:
     importTimestamp: 1632585315960
     description: null
     location:
-      lat: 40° 45' 24.882" N
-      lon: 73° 50' 48.678" W
+      lat: 40.756912
+      lon: -73.846855
       timeZone: America/New_York
       readable: Citi Field, Queens, New York
   - id: b179f791d9aa
@@ -164,8 +164,8 @@ images:
     importTimestamp: 1632585463198
     description: null
     location:
-      lat: 40° 33' 53.028" N
-      lon: 73° 52' 38.508" W
+      lat: 40.56473
+      lon: -73.877363
       timeZone: America/New_York
       readable: Fort Tilden, Queens, New York
   - id: 0a64dc849bb9
@@ -173,8 +173,8 @@ images:
     importTimestamp: 1632585628006
     description: null
     location:
-      lat: 40° 44' 7.842" N
-      lon: 73° 59' 25.278" W
+      lat: 40.735512
+      lon: -73.990355
       timeZone: America/New_York
       readable: Union Square Park, New York, New York
   - id: 719a563bdf5e
@@ -182,8 +182,8 @@ images:
     importTimestamp: 1632585738786
     description: me!
     location:
-      lat: 40° 38' 25.71" N
-      lon: 73° 57' 55.47" W
+      lat: 40.640475
+      lon: -73.965408
       timeZone: America/New_York
       readable: Ditmas Park, Brooklyn, New York
   - id: 6d822a6c354f
@@ -191,8 +191,8 @@ images:
     importTimestamp: 1632585807599
     description: Brother Leo Obrien. Outstanding Student-Athlete Award. John Biscaino 1988.
     location:
-      lat: 40° 38' 26.838" N
-      lon: 73° 57' 54.588" W
+      lat: 40.640788
+      lon: -73.965163
       timeZone: America/New_York
       readable: Ditmas Park, Brooklyn, New York
   - id: 7d13cd65ae7f
@@ -200,7 +200,17 @@ images:
     importTimestamp: 1632607855774
     description: null
     location:
-      lat: 42° 11' 36.012" N
-      lon: 74° 3' 47.91" W
+      lat: 42.193337
+      lon: -74.063308
       timeZone: America/New_York
       readable: Palenville, New York
+  - id: 1ea5b4294298
+    takenTimestamp: 1634696617000
+    importTimestamp: 1636223305358
+    description: ..Hogwash! ..Balderdash!
+    location:
+      altitude: 13.303371435169149
+      lat: 40.731889
+      lon: -73.989106
+      timeZone: America/New_York
+      readable: Webster Hall, Brooklyn, New York
