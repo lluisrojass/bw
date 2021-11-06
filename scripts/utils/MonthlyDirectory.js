@@ -41,7 +41,7 @@ class MonthlyDirectory {
   }
 
   createSortableKey(month, year) {
-    return [year, month].join('-');
+    return [year, month < 10 ? `0${month}` : month].join('-');
   }
 
   createSectionIfNotExists(key) {
