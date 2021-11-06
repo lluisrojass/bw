@@ -4,8 +4,8 @@
     "importTimestamp": 1630970492380,
     "description": null,
     "location": {
-        "lat": "40° 39' 38.382\" N",
-        "lon": "73° 57' 57.15\" W",
+        "lat": 40.660662,
+        "lon": -73.965875,
         "timeZone": "America/New_York",
         "readable": "Prospect Park, Brooklyn, New York"
     }

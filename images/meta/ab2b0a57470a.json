@@ -4,8 +4,8 @@
     "importTimestamp": 1630970267603,
     "description": null,
     "location": {
-        "lat": "40° 34' 27.12\" N",
-        "lon": "73° 58' 24.912\" W",
+        "lat": 40.5742,
+        "lon": -73.973587,
         "timeZone": "America/New_York",
         "readable": "New York Aquarium, Brooklyn, New York"
     }

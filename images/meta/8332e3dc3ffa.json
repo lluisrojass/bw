@@ -4,8 +4,8 @@
     "importTimestamp": 1630970409789,
     "description": null,
     "location": {
-        "lat": "44° 31' 43.992\" N",
-        "lon": "73° 27' 40.032\" W",
+        "lat": 44.528887,
+        "lon": -73.46112,
         "timeZone": "America/New_York",
         "readable": "Ausable Chasm, New York"
     }

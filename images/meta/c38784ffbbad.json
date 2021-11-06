@@ -4,8 +4,8 @@
     "importTimestamp": 1630968631850,
     "description": null,
     "location": {
-        "lat": "40° 42' 22.95\" N",
-        "lon": "73° 59' 25.368\" W",
+        "lat": 40.706375,
+        "lon": -73.99038,
         "timeZone": "America/New_York",
         "readable": "Manhattan Bridge, New York, New York"
     }

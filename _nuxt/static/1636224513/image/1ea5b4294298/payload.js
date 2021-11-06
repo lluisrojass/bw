@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/image/1ea5b4294298", {data:[{imageMetaData:{id:"1ea5b4294298",takenTimestamp:1634696617000,importTimestamp:1636223305358,description:"..Hogwash! ..Balderdash!",location:{altitude:13.303371435169149,lat:40.731889,lon:-73.989106,timeZone:"America\u002FNew_York",readable:"Webster Hall, Brooklyn, New York"}}}],fetch:{},mutations:void 0});

@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/image/7d13cd65ae7f", {data:[{imageMetaData:{id:"7d13cd65ae7f",takenTimestamp:1630171844000,importTimestamp:1632607855774,description:null,location:{lat:42.193337,lon:-74.063308,timeZone:"America\u002FNew_York",readable:"Palenville, New York"}}}],fetch:{},mutations:void 0});

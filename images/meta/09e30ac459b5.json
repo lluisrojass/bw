@@ -4,8 +4,8 @@
     "importTimestamp": 1630970551284,
     "description": null,
     "location": {
-        "lat": "40° 38' 24.672\" N",
-        "lon": "73° 57' 55.83\" W",
+        "lat": 40.640187,
+        "lon": -73.965508,
         "timeZone": "America/New_York",
         "readable": "Ditmas Park, Brooklyn, New York"
     }

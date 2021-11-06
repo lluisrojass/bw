@@ -4,8 +4,8 @@
     "importTimestamp": 1632607855774,
     "description": null,
     "location": {
-        "lat": "42° 11' 36.012\" N",
-        "lon": "74° 3' 47.91\" W",
+        "lat": 42.193337,
+        "lon": -74.063308,
         "timeZone": "America/New_York",
         "readable": "Palenville, New York"
     }

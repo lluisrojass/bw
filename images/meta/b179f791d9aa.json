@@ -4,8 +4,8 @@
     "importTimestamp": 1632585463198,
     "description": null,
     "location": {
-        "lat": "40° 33' 53.028\" N",
-        "lon": "73° 52' 38.508\" W",
+        "lat": 40.56473,
+        "lon": -73.877363,
         "timeZone": "America/New_York",
         "readable": "Fort Tilden, Queens, New York"
     }

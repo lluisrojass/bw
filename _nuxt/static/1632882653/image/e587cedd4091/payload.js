@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/image/e587cedd4091", {data:[{imageMetaData:{id:"e587cedd4091",takenTimestamp:1631321852000,importTimestamp:1632585315960,description:null,location:{lat:"40° 45' 24.882\" N",lon:"73° 50' 48.678\" W",timeZone:"America\u002FNew_York",readable:"Citi Field, Queens, New York"}}}],fetch:{},mutations:void 0});

@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/image/cfa3c68203fb", {data:[{imageMetaData:{id:"cfa3c68203fb",takenTimestamp:1624482628000,importTimestamp:1630968874226,description:null,location:{lat:40.658553,lon:-73.968383,timeZone:"America\u002FNew_York",readable:"Prospect Park, Brooklyn, New York"}}}],fetch:{},mutations:void 0});

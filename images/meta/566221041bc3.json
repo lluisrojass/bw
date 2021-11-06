@@ -4,8 +4,8 @@
     "importTimestamp": 1630970693351,
     "description": null,
     "location": {
-        "lat": "41° 56' 47.892\" N",
-        "lon": "74° 0' 20.96\" W",
+        "lat": 41.946637,
+        "lon": -74.005822,
         "timeZone": "America/New_York",
         "readable": "Kingston, New York"
     }

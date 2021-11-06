@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/image/d8349e0fdb1d", {data:[{imageMetaData:{id:"d8349e0fdb1d",takenTimestamp:1624922363000,importTimestamp:1630969615839,description:null,location:{lat:40.73563,lon:-73.989913,timeZone:"America\u002FNew_York",readable:"Union Square Park, New York, New York"}}}],fetch:{},mutations:void 0});

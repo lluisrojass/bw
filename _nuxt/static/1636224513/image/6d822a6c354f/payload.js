@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/image/6d822a6c354f", {data:[{imageMetaData:{id:"6d822a6c354f",takenTimestamp:1631830624000,importTimestamp:1632585807599,description:"Brother Leo Obrien. Outstanding Student-Athlete Award. John Biscaino 1988.",location:{lat:40.640788,lon:-73.965163,timeZone:"America\u002FNew_York",readable:"Ditmas Park, Brooklyn, New York"}}}],fetch:{},mutations:void 0});

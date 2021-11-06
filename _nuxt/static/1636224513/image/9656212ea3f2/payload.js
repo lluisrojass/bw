@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/image/9656212ea3f2", {data:[{imageMetaData:{id:"9656212ea3f2",takenTimestamp:1625250606000,importTimestamp:1630970343561,description:null,location:{lat:40.574458,lon:-73.973647,timeZone:"America\u002FNew_York",readable:"New York Aquarium, Brooklyn, New York"}}}],fetch:{},mutations:void 0});

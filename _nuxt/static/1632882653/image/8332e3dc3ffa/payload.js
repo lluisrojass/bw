@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/image/8332e3dc3ffa", {data:[{imageMetaData:{id:"8332e3dc3ffa",takenTimestamp:1626808318000,importTimestamp:1630970409789,description:null,location:{lat:"44° 31' 43.992\" N",lon:"73° 27' 40.032\" W",timeZone:"America\u002FNew_York",readable:"Ausable Chasm, New York"}}}],fetch:{},mutations:void 0});

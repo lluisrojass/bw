@@ -4,8 +4,8 @@
     "importTimestamp": 1632585628006,
     "description": null,
     "location": {
-        "lat": "40° 44' 7.842\" N",
-        "lon": "73° 59' 25.278\" W",
+        "lat": 40.735512,
+        "lon": -73.990355,
         "timeZone": "America/New_York",
         "readable": "Union Square Park, New York, New York"
     }

@@ -4,8 +4,8 @@
     "importTimestamp": 1630968749009,
     "description": null,
     "location": {
-        "lat": "40° 38' 24.24\" N",
-        "lon": "73° 58' 1.65\" W",
+        "lat": 40.640067,
+        "lon": -73.967125,
         "timeZone": "America/New_York",
         "readable": "Cortelyou Road, Brooklyn, New York"
     }
