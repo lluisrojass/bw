@@ -1,7 +1,15 @@
 module.exports = {
   root: true,
+  parser: 'vue-eslint-parser',
+  parserOptions: {
+    parser: '@typescript-eslint/parser',
+    sourceType: 'module',
+    extraFileExtensions: ['.vue']
+  },
   extends: [
-    '@nuxtjs'
+    '@nuxtjs',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended'
   ],
   rules: {
     'space-before-function-paren': ['error', 'never'],
@@ -23,6 +31,12 @@ module.exports = {
       files: ['src/**/Link.vue'],
       rules: {
         'vue/attribute-hyphenation': 'off'
+      }
+    },
+    {
+      files: ['src/services/*'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off'
       }
     }
   ]

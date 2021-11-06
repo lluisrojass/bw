@@ -7,10 +7,10 @@
     />
   </Region>
 </template>
-<script>
-import PlainGallery from '~/components/organisms/PlainGallery';
-import Region, { TYPES } from '~/components/atoms/Region';
-import PageService from '~/services/PageService';
+<script lang="ts">
+import PlainGallery from '../components/organisms/PlainGallery.vue';
+import Region, { TYPES } from '~/components/atoms/Region.vue';
+import PageService from '~/services/Page';
 
 export default {
   components: {
@@ -20,7 +20,7 @@ export default {
   asyncData(context) {
     return {
       currentPage: 1,
-      imageIds: PageService.getPhotostreamPage(1)
+      imageIds: PageService.getDefaultPhotostreamPage(1)
     };
   },
   data() {
@@ -31,7 +31,7 @@ export default {
   },
   computed: {
     hasNextPage() {
-      return PageService.hasPhotostreamPage(this.currentPage + 1);
+      return PageService.hasDefaultPhotostreamPage(this.currentPage + 1);
     }
   },
   methods: {

@@ -44,6 +44,11 @@ export default {
   pageTransition: 'fade',
   components: false,
   buildDir: 'build',
+  buildModules: ['@nuxt/typescript-build'],
+  types; [
+    "@nuxt/types",
+    "@types/node"
+  ]
   build: {
     extractCSS: true,
     styleResources: {

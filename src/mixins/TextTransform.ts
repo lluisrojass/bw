@@ -11,7 +11,7 @@ export default {
       default: false
     }
   },
-  data(props) {
+  data(props: { uppercase: boolean; capitalize: boolean }) {
     let textVariantClass = '';
     if (props.uppercase) {
       textVariantClass = 'text--uppercase';

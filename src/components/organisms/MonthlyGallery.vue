@@ -43,7 +43,7 @@
     />
   </div>
 </template>
-<script>
+<script lang="ts">
 import Row from '~/components/atoms/Row';
 import Column from '~/components/atoms/Column';
 import Heading from '~/components/atoms/Heading';
@@ -96,7 +96,7 @@ export default {
     triggerGetNextPage() {
       this.$emit('getNextPage');
     },
-    onImageLoad(id) {
+    onImageLoad() {
       this.loadedImages += 1;
     },
     onIntersectionChange(entries) {

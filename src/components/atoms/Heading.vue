@@ -11,12 +11,15 @@
     <slot />
   </component>
 </template>
-<script>
-import textSizeMixin from '../../mixins/TextSize';
-import textTransformMixin from '../../mixins/TextTransform';
+<script lang="ts">
+import textTransformMixin from '~/mixins/TextTransform';
+import textSizeMixin from '~/mixins/TextSize';
 
 export default {
-  mixins: [textSizeMixin, textTransformMixin],
+  mixins: [
+    textSizeMixin,
+    textTransformMixin
+  ],
   props: {
     size: {
       required: false,

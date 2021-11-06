@@ -10,7 +10,7 @@
     <slot />
   </p>
 </template>
-<script>
+<script lang="ts">
 import textSizeMixin from '~/mixins/TextSize';
 import textTransformMixin from '~/mixins/TextTransform';
 

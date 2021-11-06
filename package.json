@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "An black and white image blog",
   "main": "index.js",
+  "engine": "^12.22.0",
   "scripts": {
     "import-image": "node ./scripts/import-image.js",
     "create-build-dir": "mkdir -p ./build",
@@ -41,8 +42,12 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.15.7",
+    "@nuxt/types": "^2.15.8",
+    "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/eslint-config": "^6.0.1",
     "@nuxtjs/svg": "^0.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.3.0",
+    "@typescript-eslint/parser": "^5.3.0",
     "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^7.18.0",
@@ -54,6 +59,7 @@
     "rimraf": "^3.0.2",
     "sass": "^1.39.0",
     "sass-loader": "^10.1.1",
+    "vue-eslint-parser": "^8.0.1",
     "yaml": "^1.10.2"
   }
 }

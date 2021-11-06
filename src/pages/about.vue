@@ -11,7 +11,8 @@
     </Row>
   </Region>
 </template>
-<script>
+<script lang="ts">
+import MiscUtils from '~/utils/misc';
 import Region from '~/components/atoms/Region';
 import Row from '~/components/atoms/Row';
 import Column from '~/components/atoms/Column';
@@ -28,7 +29,7 @@ export default {
   },
   data() {
     return {
-      about: JSON.parse(JSON.stringify(about)),
+      about: MiscUtils.deepCopy(about),
       TEXT_SIZES: SIZES
     };
   }

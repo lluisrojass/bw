@@ -22,8 +22,7 @@
     <slot />
   </component>
 </template>
-<script>
-
+<script lang="ts">
 import textSizeMixin from '~/mixins/TextSize';
 import textTransformMixin from '~/mixins/TextTransform';
 
@@ -45,10 +44,10 @@ export default {
       required: true
     }
   },
-  data(props) {
-    return {
-      isExternal: props.to.indexOf('http') === 0
-    };
+  computed: {
+    isExternal() {
+      return this.to.indexOf('http') === 0;
+    }
   }
 };
 </script>
