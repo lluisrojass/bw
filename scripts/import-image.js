@@ -40,8 +40,8 @@ const createImageEntry = (id, exifData) => {
     description: null,
     location: {
       altitude,
-      lat: decimalLat,
-      lon: decimalLon,
+      lat: Number(decimalLat.toFixed(6)),
+      lon: Number(decimalLon.toFixed(6)),
       timeZone: currentTimezone,
       readable: null
     }
