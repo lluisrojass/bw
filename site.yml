@@ -214,3 +214,13 @@ images:
       lon: -73.989106
       timeZone: America/New_York
       readable: Webster Hall, Brooklyn, New York
+  - id: f55ab4e31c48
+    takenTimestamp: 1636256762000
+    importTimestamp: 1636263998262
+    description: null
+    location:
+      altitude: 45.59907153407892
+      lat: 40.661106
+      lon: -73.977678
+      timeZone: America/New_York
+      readable: Outer Loop, Prospect Park, Brooklyn, NY
