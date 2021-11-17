@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/image/0c1ce66179c7", {data:[{imageMetaData:{id:"0c1ce66179c7",takenTimestamp:1636751682000,importTimestamp:1637189628208,description:null,location:{altitude:29.34814453125,lat:38.886967,lon:-77.032219,timeZone:"America\u002FNew_York",readable:"United States Holocaust Memorial Museum, Washington DC"}}}],fetch:{},mutations:void 0});

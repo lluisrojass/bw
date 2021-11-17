@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/image/b571b9f66a6d", {data:[{imageMetaData:{id:"b571b9f66a6d",takenTimestamp:1636746551000,importTimestamp:1637189333746,description:null,location:{altitude:21.811893505847227,lat:38.889317,lon:-77.049811,timeZone:"America\u002FNew_York",readable:"Lincoln Memorial, Washington DC"}}}],fetch:{},mutations:void 0});

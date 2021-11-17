@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/image/023148fc1674", {data:[{imageMetaData:{id:"023148fc1674",takenTimestamp:1636757671000,importTimestamp:1637189792770,description:null,location:{altitude:.3024635312632407,lat:38.887781,lon:-77.047439,timeZone:"America\u002FNew_York",readable:"Korean War Veterans Memorial, Washington DC"}}}],fetch:{},mutations:void 0});
