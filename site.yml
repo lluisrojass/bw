@@ -224,3 +224,43 @@ images:
       lon: -73.977678
       timeZone: America/New_York
       readable: Outer Loop, Prospect Park, Brooklyn, NY
+  - id: b571b9f66a6d
+    takenTimestamp: 1636746551000
+    importTimestamp: 1637189333746
+    description: null
+    location:
+      altitude: 21.811893505847227
+      lat: 38.889317
+      lon: -77.049811
+      timeZone: America/New_York
+      readable: Lincoln Memorial, Washington DC
+  - id: 0c1ce66179c7
+    takenTimestamp: 1636751682000
+    importTimestamp: 1637189628208
+    description: null
+    location:
+      altitude: 29.34814453125
+      lat: 38.886967
+      lon: -77.032219
+      timeZone: America/New_York
+      readable: United States Holocaust Memorial Museum, Washington DC
+  - id: 023148fc1674
+    takenTimestamp: 1636757671000
+    importTimestamp: 1637189792770
+    description: null
+    location:
+      altitude: 0.3024635312632407
+      lat: 38.887781
+      lon: -77.047439
+      timeZone: America/New_York
+      readable: Korean War Veterans Memorial, Washington DC
+  - id: 1cc55121de33
+    takenTimestamp: 1636757895000
+    importTimestamp: 1637189889690
+    description: null
+    location:
+      altitude: 12.50445937690898
+      lat: 38.888508
+      lon: -77.049058
+      timeZone: America/New_York
+      readable: Washington DC
