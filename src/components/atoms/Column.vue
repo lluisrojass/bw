@@ -15,17 +15,14 @@ export default {
   props: {
     small: {
       type: Number,
-      validator: num => num >= 0 && num <= 8,
       required: true
     },
     medium: {
       type: Number,
-      validator: num => num >= 0 && num <= 12,
       required: true
     },
     large: {
       type: Number,
-      validator: num => num >= 0 && num <= 12,
       required: true
     }
   }

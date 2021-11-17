@@ -40,6 +40,10 @@ export type DefaultPhotostreamDirectory = string[];
  */
 export type MonthlyPhotostreamDirectory = Array<MonthyDirectoryPage>;
 /**
+ * A list of image ids
+ */
+export type ImageIdList = string[];
+/**
  * A "page", at heart just an ordered list of imageIds
  */
-export type ImagePage = string[];
+export type ImagePage = ImageIdList[];

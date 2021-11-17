@@ -4,6 +4,7 @@ interface SIZES {
   MEDIUM: 0x3,
   NONE: 0x2,
 }
+
 export const SIZES: SIZES = {
   SMALL: 0x0,
   LARGE: 0x1,
@@ -14,6 +15,7 @@ export const SIZES: SIZES = {
 interface CLASS_MAP {
   [key: number]: string
 }
+
 export const CLASS_MAP: CLASS_MAP = {
   [SIZES.SMALL]: 'text--small',
   [SIZES.LARGE]: 'text--large',

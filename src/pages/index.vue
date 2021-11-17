@@ -8,41 +8,45 @@
   </Region>
 </template>
 <script lang="ts">
+import Vue from 'vue';
 import PlainGallery from '../components/organisms/PlainGallery.vue';
 import Region, { TYPES } from '~/components/atoms/Region.vue';
 import PageService from '~/services/Page';
+import { ImagePage } from '~/types';
 
-export default {
+export default Vue.extend({
   components: {
     PlainGallery,
     Region
   },
-  asyncData(context) {
+  asyncData() {
     return {
-      currentPage: 1,
-      imageIds: PageService.getDefaultPhotostreamPage(1)
+      imagePage: PageService.getDefaultPhotostreamPage(1)
     };
   },
   data() {
     return {
-      imageIds: this.imageIds,
+      currentPage: 1,
+      imagePage: [] as ImagePage,
       REGION_TYPES: TYPES
     };
   },
   computed: {
-    hasNextPage() {
-      return PageService.hasDefaultPhotostreamPage(this.currentPage + 1);
+    hasNextPage(): boolean {
+      const currentPage = this.currentPage;
+      return PageService.hasDefaultPhotostreamPage(currentPage + 1);
     }
   },
   methods: {
-    getNextPage() {
+    getNextPage(): void {
       if (!this.hasNextPage) { return; }
 
       const nextPage = this.currentPage + 1;
-      const nextPageImageIds = PageService.getPhotostreamPage(nextPage);
-      this.imageIds = this.imageIds.concat(nextPageImageIds);
+      const nextPageImageIds = PageService.getDefaultPhotostreamPage(nextPage);
+
+      this.imagePage = this.imagePage.concat(nextPageImageIds);
       this.currentPage = nextPage;
     }
   }
-};
+});
 </script>

@@ -1,18 +1,14 @@
 module.exports = {
   root: true,
   parser: 'vue-eslint-parser',
-  parserOptions: {
-    parser: '@typescript-eslint/parser',
-    sourceType: 'module',
-    extraFileExtensions: ['.vue']
-  },
   extends: [
-    '@nuxtjs',
-    'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended'
+    '@nuxtjs/eslint-config-typescript',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:vue/recommended'
   ],
   rules: {
     'space-before-function-paren': ['error', 'never'],
+    curly: ['off'],
     'vue/multiline-html-element-content-newline': ['error', {
       ignoreWhenEmpty: true,
       ignores: ['pre', 'textarea', 'Link'],

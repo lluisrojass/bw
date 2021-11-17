@@ -18,11 +18,13 @@
     <div ref="nextPageLoader" class="invisible" />
   </Row>
 </template>
-<script>
-import Row from '~/components/atoms/Row';
-import Column from '~/components/atoms/Column';
-import GalleryPicture from '~/components/molecules/GalleryPicture';
-import ImageVariantRoutes from '~/routes/ImageVariantRoutes';
+<script lang="ts">
+import { PropType } from 'vue';
+import Row from '~/components/atoms/Row.vue';
+import Column from '~/components/atoms/Column.vue';
+import GalleryPicture from '~/components/molecules/GalleryPicture.vue';
+import ImageVariantRoutes from '~/routes/ImageVariantRoutes.vue';
+import { ImageIdList } from '~/types';
 
 export default {
   components: {
@@ -32,7 +34,7 @@ export default {
   },
   props: {
     imageIds: {
-      type: Array,
+      type: Array as PropType<ImageIdList>,
       required: true
     },
     hasNextPage: {
@@ -49,13 +51,13 @@ export default {
   },
   watch: {
     isLoaderInView(currLoaderInView) {
-      if (!currLoaderInView) { return; }
+      if (!currLoaderInView) return;
 
       this.triggerGetNextPage();
     },
     loadedImages(currLoadedImages) {
-      const numImageIds = this.$props.imageIds.length;
-      if (currLoadedImages !== numImageIds || !this.isLoaderInView) { return; }
+      if (currLoadedImages !== this.imageIds.length || !this.isLoaderInView)
+        return;
 
       this.triggerGetNextPage();
     }
@@ -65,16 +67,16 @@ export default {
       root: null,
       threshold: 0.1
     });
-    observer.observe(this.$refs.nextPageLoader);
+    observer.observe(this.$refs.nextPageLoader as Element);
   },
   methods: {
     triggerGetNextPage() {
       this.$emit('getNextPage');
     },
-    onImageLoad(id) {
+    onImageLoad() {
       this.loadedImages += 1;
     },
-    onIntersectionChange(entries) {
+    onIntersectionChange(entries: IntersectionObserverEntry[]) {
       const entry = entries[0];
       this.isLoaderInView = !!entry && entry.isIntersecting;
     }
