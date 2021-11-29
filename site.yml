@@ -264,3 +264,23 @@ images:
       lon: -77.049058
       timeZone: America/New_York
       readable: Washington DC
+  - id: ea1418554126
+    takenTimestamp: 1637704467000
+    importTimestamp: 1638166214303
+    description: TIRED, NERVOUS & BROKE!
+    location:
+      altitude: 57.88912579957356
+      lat: 41.935233
+      lon: -74.027756
+      timeZone: America/New_York
+      readable: Dietz Stadium, Kingston, New York
+  - id: 5aa22fa1c925
+    takenTimestamp: 1638041276000
+    importTimestamp: 1638166218842
+    description: 
+    location:
+      altitude: 50.87126921917395
+      lat: 41.946275
+      lon: -74.004731
+      timeZone: America/New_York
+      readable: Kingston, New York
