@@ -14,13 +14,6 @@
       :uppercase="true"
       :text-size="TEXT_SIZES.SMALL"
     >{{ monthly.text }}</Link>
-    <Link
-      :class="$style.link"
-      :to="about.href"
-      :disabled="isAtAboutPage"
-      :uppercase="true"
-      :text-size="TEXT_SIZES.SMALL"
-    >{{ about.text }}</Link>
   </div>
 </template>
 <script>
