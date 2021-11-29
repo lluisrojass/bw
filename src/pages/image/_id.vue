@@ -26,6 +26,9 @@
         <Paragraph :text-size="TEXT_SIZES.SMALL" :uppercase="true">
           {{ dateTakenMessage }}
         </Paragraph>
+        <Paragraph :text-size="TEXT_SIZES.SMALL" :uppercase="true">
+          iPhone 12 Mini
+        </Paragraph>
       </Column>
     </Row>
   </Region>
@@ -68,7 +71,9 @@ export default {
       year: 'numeric',
       month: 'long',
       day: 'numeric',
-      timeZone: this.imageMetaData.timeZone
+      timeZone: this.imageMetaData.timeZone,
+      hourCycle: 'h12',
+      hour: 'numeric'
     });
     this.dateTakenMessage = formatted;
   }

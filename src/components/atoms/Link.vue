@@ -65,8 +65,8 @@ export default {
     }
 
     &--has-text {
-      &:hover {
-        border-bottom: 2px solid $fg-cream;
+      &.link--disabled {
+        text-shadow: 0 0 5px rgb(255, 255, 255, 0.75);
       }
     }
 
@@ -74,9 +74,5 @@ export default {
     &:focus {
       outline-color: $fg-accent;
     }
-  }
-
-  .link--disabled.link--has-text {
-    border-bottom: 2px solid $fg-cream;
   }
 </style>
