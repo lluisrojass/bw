@@ -66,12 +66,13 @@ export default {
   },
   created() {
     const dateTaken = new Date(this.imageMetaData.takenTimestamp);
+    console.log();
     const formatted = dateTaken.toLocaleDateString('en-US', {
       weekday: 'long',
       year: 'numeric',
       month: 'long',
       day: 'numeric',
-      timeZone: this.imageMetaData.timeZone,
+      timeZone: this.imageMetaData.location.timeZone,
       hourCycle: 'h12',
       hour: 'numeric'
     });
