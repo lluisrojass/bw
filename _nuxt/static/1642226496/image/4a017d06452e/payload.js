@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/image/4a017d06452e", {data:[{imageMetaData:{id:"4a017d06452e",takenTimestamp:1640033117000,importTimestamp:1642219697052,description:null,location:{altitude:7.650278504035467,lat:15.7837,lon:-87.493614,timeZone:"America\u002FMexico_City",readable:"Tela, Honduras"}}}],fetch:{},mutations:void 0});

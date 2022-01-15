@@ -1,0 +1,13 @@
+{
+    "id": "70d53df4b907",
+    "takenTimestamp": 1640803348000,
+    "importTimestamp": 1642219724322,
+    "description": null,
+    "location": {
+        "altitude": 1051.7854889589905,
+        "lat": 14.093406,
+        "lon": -87.201217,
+        "timeZone": "America/Mexico_City",
+        "readable": "Tegucigalpa, Honduras"
+    }
+}

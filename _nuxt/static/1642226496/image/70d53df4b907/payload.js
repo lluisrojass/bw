@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/image/70d53df4b907", {data:[{imageMetaData:{id:"70d53df4b907",takenTimestamp:1640803348000,importTimestamp:1642219724322,description:null,location:{altitude:1051.7854889589905,lat:14.093406,lon:-87.201217,timeZone:"America\u002FMexico_City",readable:"Tegucigalpa, Honduras"}}}],fetch:{},mutations:void 0});

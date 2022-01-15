@@ -1,0 +1,13 @@
+{
+    "id": "4a017d06452e",
+    "takenTimestamp": 1640033117000,
+    "importTimestamp": 1642219697052,
+    "description": null,
+    "location": {
+        "altitude": 7.650278504035467,
+        "lat": 15.7837,
+        "lon": -87.493614,
+        "timeZone": "America/Mexico_City",
+        "readable": "Tela, Honduras"
+    }
+}

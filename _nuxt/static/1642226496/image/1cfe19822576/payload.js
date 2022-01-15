@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/image/1cfe19822576", {data:[{imageMetaData:{id:"1cfe19822576",takenTimestamp:1640719089000,importTimestamp:1642219710860,description:null,location:{altitude:1109.6685456595264,lat:14.080553,lon:-87.158181,timeZone:"America\u002FMexico_City",readable:"Basilica de Nuestra Señora De Suyapa, Tegucigalpa, Honduras"}}}],fetch:{},mutations:void 0});
