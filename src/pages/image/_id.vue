@@ -71,7 +71,7 @@ export default {
       year: 'numeric',
       month: 'long',
       day: 'numeric',
-      timeZone: this.imageMetaData.timeZone,
+      timeZone: this.imageMetaData.location.timeZone,
       hourCycle: 'h12',
       hour: 'numeric'
     });
