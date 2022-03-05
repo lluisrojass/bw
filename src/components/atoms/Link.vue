@@ -66,7 +66,7 @@ export default {
 
     &--has-text {
       &.link--disabled {
-        text-shadow: 0 0 5px rgb(255, 255, 255, 0.75);
+        opacity: 0.25;
       }
     }
 
