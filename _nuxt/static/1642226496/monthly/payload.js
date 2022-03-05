@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/monthly", {data:[{currentPage:1,months:[{title:"December 2021",imageIds:["70d53df4b907","7a93ac4d6e7c","1cfe19822576","4a017d06452e"]}]}],fetch:{},mutations:void 0});

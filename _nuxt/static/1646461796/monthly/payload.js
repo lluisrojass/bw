@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/monthly", {data:[{currentPage:1,months:[{title:"March 2022",imageIds:["06dc859b4999"]}]}],fetch:{},mutations:void 0});
