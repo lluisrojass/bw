@@ -324,3 +324,33 @@ images:
       lon: -87.201217
       timeZone: America/Mexico_City
       readable: Tegucigalpa, Honduras
+  - id: 5ee947f01338
+    takenTimestamp: 1643424696000
+    importTimestamp: 1646459634987
+    description: null
+    location:
+      altitude: 11.344520569570296
+      lat: 40.641261
+      lon: -73.964272
+      timeZone: America/New_York
+      readable: Brooklyn, New York
+  - id: eb1b79c465c1
+    takenTimestamp: 1645204582000
+    importTimestamp: 1646459641722
+    description: null
+    location:
+      altitude: 57.640651714774215
+      lat: 41.946342
+      lon: -74.001525
+      timeZone: America/New_York
+      readable: Kingston, New York
+  - id: 06dc859b4999
+    takenTimestamp: 1646458297000
+    importTimestamp: 1646459818928
+    description: null
+    location:
+      altitude: 12.43308313270075
+      lat: 40.639931
+      lon: -73.965553
+      timeZone: America/New_York
+      readable: Brooklyn, New York
