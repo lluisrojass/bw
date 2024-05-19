@@ -1,5 +1,5 @@
 # What is this?
 
-A static site of black and white squares. 
+A personal photo-blog and playground 
 
 [View here](https://lluisrojass.github.io/bw/)
