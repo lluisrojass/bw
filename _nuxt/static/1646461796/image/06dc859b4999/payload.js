@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/image/06dc859b4999", {data:[{imageMetaData:{id:"06dc859b4999",takenTimestamp:1646458297000,importTimestamp:1646459818928,description:null,location:{altitude:12.43308313270075,lat:40.639931,lon:-73.965553,timeZone:"America\u002FNew_York",readable:"Brooklyn, New York"}}}],fetch:{},mutations:void 0});
