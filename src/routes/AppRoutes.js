@@ -79,7 +79,7 @@ class AppRoutes {
    * @public
    */
   static createAppPrefix() {
-    return '/bw';
+    return '/photos';
   };
 
   /**

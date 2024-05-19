@@ -1,5 +1,5 @@
 {
-  "name": "bw",
+  "name": "photos",
   "version": "1.0.0",
   "description": "An black and white image blog",
   "main": "index.js",
@@ -24,15 +24,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lluisrojass/bw.git"
+    "url": "git+https://github.com/lluisrojass/photos.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lluisrojass/bw/issues"
+    "url": "https://github.com/lluisrojass/photos/issues"
   },
-  "homepage": "https://github.com/lluisrojass/bw#readme",
+  "homepage": "https://github.com/lluisrojass/photos#readme",
   "dependencies": {
     "axios": "^0.21.4",
     "nuxt": "^2.15.8",
