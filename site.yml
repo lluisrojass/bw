@@ -123,15 +123,6 @@ images:
       lon: -73.965508
       timeZone: America/New_York
       readable: Ditmas Park, Brooklyn, New York
-  - id: f77b2837485c
-    takenTimestamp: 1629690502000
-    importTimestamp: 1630970606418
-    description: null
-    location:
-      lat: 40.640187
-      lon: -73.965592
-      timeZone: America/New_York
-      readable: Ditmas Park, Brooklyn, New York
   - id: 566221041bc3
     takenTimestamp: 1630169605000
     importTimestamp: 1630970693351
@@ -214,16 +205,6 @@ images:
       lon: -73.989106
       timeZone: America/New_York
       readable: Webster Hall, Brooklyn, New York
-  - id: f55ab4e31c48
-    takenTimestamp: 1636256762000
-    importTimestamp: 1636263998262
-    description: null
-    location:
-      altitude: 45.59907153407892
-      lat: 40.661106
-      lon: -73.977678
-      timeZone: America/New_York
-      readable: Outer Loop, Prospect Park, Brooklyn, NY
   - id: b571b9f66a6d
     takenTimestamp: 1636746551000
     importTimestamp: 1637189333746
@@ -344,13 +325,3 @@ images:
       lon: -74.001525
       timeZone: America/New_York
       readable: Kingston, New York
-  - id: 06dc859b4999
-    takenTimestamp: 1646458297000
-    importTimestamp: 1646459818928
-    description: null
-    location:
-      altitude: 12.43308313270075
-      lat: 40.639931
-      lon: -73.965553
-      timeZone: America/New_York
-      readable: Brooklyn, New York
