@@ -5,7 +5,7 @@ export default {
   target: 'static',
   srcDir: './src',
   router: {
-    base: '/bw/'
+    base: '/photos/'
   },
   head: {
     title: 'Moments In Black & White',
